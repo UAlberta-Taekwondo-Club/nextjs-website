@@ -1,3 +1,5 @@
+Template is from [2. Online Course Template](https://hashnode.com/post/the-best-free-nextjs-landing-page-templates-in-2021-ckmaeebcg0f9vkhs144kj0s27)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
