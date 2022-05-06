@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://startup-online-course.vercel.app
+
+# Sitemaps
+Sitemap: https://startup-online-course.vercel.app/sitemap.xml
