@@ -7,7 +7,8 @@ import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'components/link';
 import menuItems from './header.data';
 import Logo from 'components/logo';
-import LogoDark from 'assets/logo.svg';
+import { Link as ScrollLink, scroller } from 'react-scroll';
+import { scrollOptions } from './header';
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -18,6 +19,11 @@ const MobileDrawer = () => {
       type: 'TOGGLE',
     });
   }, [dispatch]);
+
+  const handleJoinUs = () => {
+    scroller.scrollTo('pricing', scrollOptions)
+    toggleHandler()
+  }
 
   return (
     <Drawer
@@ -35,16 +41,24 @@ const MobileDrawer = () => {
     >
       <Scrollbars autoHide>
         <Box sx={styles.content}>
-          <Logo src={LogoDark} />
+          <Logo />
           <Box sx={styles.menu}>
             {menuItems.map(({ path, label }, i) => (
-              <Link path={path} key={i} label={label} sx={styles.menu.link} />
+              <ScrollLink
+                sx={styles.menu.link}
+                to={path}
+                key={i}
+                onClick={toggleHandler} // close drawer
+                {...scrollOptions}
+              >
+                {label}
+              </ScrollLink>
             ))}
           </Box>
 
           <Box sx={styles.menuFooter}>
-            <Button variant="primary" sx={styles.button}>
-              Try for Free
+            <Button variant="primary" sx={styles.button} onClick={handleJoinUs}>
+              Join us
             </Button>
           </Box>
         </Box>

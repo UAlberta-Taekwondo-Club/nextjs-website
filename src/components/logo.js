@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Image } from 'theme-ui';
 import { Link } from 'components/link';
-import LogoDark from 'assets/logo.svg';
 
 export default function Logo() {
   return (
@@ -14,7 +13,7 @@ export default function Logo() {
         cursor: 'pointer',
       }}
     >
-      <Image src={LogoDark} alt="startup landing logo" />
+      <Image src="/logo.png" alt="UAlberta Taekwondo Club" sx={{ height: "50px" }} />
     </Link>
   );
 }

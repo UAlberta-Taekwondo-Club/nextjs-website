@@ -1,14 +1,20 @@
 /** @jsx jsx */
-import { Link } from 'components/link';
 import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
-import { Link as ScrollLink } from 'react-scroll';
-import { Container, Flex, jsx } from 'theme-ui';
+import { Link as ScrollLink, scroller } from 'react-scroll';
+import { Container, Flex, jsx, Link } from 'theme-ui';
 import menuItems from './header.data';
 import MobileDrawer from './mobileDrawer';
 
-
+export const scrollOptions = {
+  spy: true,
+  smooth: true,
+  offset: -100,
+  duration: 500,
+  activeClass: "active"
+}
 export default function Header({ className }) {
+
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className}>
@@ -18,27 +24,25 @@ export default function Header({ className }) {
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
               <ScrollLink
-                activeClass="active"
                 sx={styles.nav.navLink}
                 to={path}
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
                 key={i}
+                {...scrollOptions}
               >
                 {label}
               </ScrollLink>
             ))}
           </Flex>
 
+
           <Link
-            path="/"
             ml={2}
-            label="Try for Free"
             sx={styles.headerBtn}
             variant="buttons.primary"
-          />
+            onClick={() => scroller.scrollTo('pricing', scrollOptions)}
+          >
+            Join us
+          </Link>
 
           <MobileDrawer />
         </Container>
@@ -67,7 +71,7 @@ const styles = {
     '&.sticky': {
       backgroundColor: 'background',
       color: 'text',
-      py: '15px',
+      py: '10px',
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
     },
   },
