@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
 import { keyframes } from '@emotion/core';
-import { jsx, Box, Heading, Text, Button, Image } from 'theme-ui';
+import eyeIcon from 'assets/eye-2.svg';
 import { Link } from 'components/link';
 import VideoBtn from 'components/video-btn';
-import { FaStar, FaAngleDown, FaAngleUp, FaCheckCircle } from 'react-icons/fa';
-import eyeIcon from 'assets/eye-2.svg';
+import React, { useState } from 'react';
+import { FaAngleDown, FaAngleUp, FaCheckCircle, FaStar } from 'react-icons/fa';
+import { Box, Button, Heading, Image, Text } from 'theme-ui';
 
 const PopularCard = (props) => {
   const [status, setStatus] = useState(props.expanded);

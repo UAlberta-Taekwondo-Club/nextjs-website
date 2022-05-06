@@ -1,14 +1,12 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button, Box } from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import { IoIosUnlock } from 'react-icons/io';
-import { NavLink, Link } from 'components/link';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'components/link';
 import Logo from 'components/logo';
-
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
-import MobileDrawer from './mobileDrawer';
+import { Link as ScrollLink } from 'react-scroll';
+import { Container, Flex, jsx } from 'theme-ui';
 import menuItems from './header.data';
+import MobileDrawer from './mobileDrawer';
+
 
 export default function Header({ className }) {
   return (
