@@ -1,25 +1,45 @@
-import {
-  Box,
-  Flex,
-  Container,
-  Image,
-  Heading,
-  Text,
-  Input,
-  Button,
-} from 'theme-ui';
-
-import React from 'react';
-
-import VideoBtn from 'components/video-btn';
-import { FaStar } from 'react-icons/fa';
-import { IoIosSearch } from 'react-icons/io';
-
 import BannerBG from 'assets/banner-bg-1-1.png';
-import BannerTextLine from 'assets/banner-text-line.png';
-import BannerPattern from 'assets/banner-pattern.png';
 import BannerImage from 'assets/banner-image-1.png';
-import PartnerImage from 'assets/brands.svg';
+import BannerPattern from 'assets/banner-pattern.png';
+import BannerTextLine from 'assets/banner-text-line.png';
+import VideoBtn from 'components/video-btn';
+import React from 'react';
+import {
+  Box, Container, Flex, Heading, Image, Text
+} from 'theme-ui';
+import { SiDiscord, SiYoutube, SiLinktree } from 'react-icons/si';
+import { MdEmail } from 'react-icons/md';
+import { RiInstagramFill } from "react-icons/ri"
+import { IconButton, Tooltip } from '@material-ui/core';
+
+const socialMedias = [{
+  "title": "Email crtkd@ualberta.ca",
+  "url": "mailto:crtkd@ualberta.ca",
+  "icon": <MdEmail />,
+},
+{
+  "title": "Instagram @ua_taekwondo",
+  "url": "https://www.instagram.com/ua_taekwondo/",
+  "icon": <RiInstagramFill />,
+},
+{
+  "title": "Youtube",
+  "url": "https://www.youtube.com/channel/UCF9sw7YeFE9mbM-POCMie7g",
+  "icon": <SiYoutube />,
+},
+{
+  "title": "Discord",
+  "url": "https://discord.gg/z3atcrMWGX",
+  "icon": <SiDiscord />,
+},
+{
+  "title": "Linktree",
+  "url": "https://linktr.ee/ua_tkd",
+  "icon": <SiLinktree />,
+}
+]
+
+
 
 const Banner = () => {
   return (
@@ -33,13 +53,16 @@ const Banner = () => {
                 Taekwondo Club
               </Heading>
               <Text as="p">
-                Get your blood tests delivered at let home collect sample <br />
-                from the victory of the managments that supplies best <br />
-                design system guidelines ever.
+                The University of Alberta Taekwondo Club is a community that is eager to include athletes of all skills and fitness levels. We are proud to have a wide range of members with varying degrees of experience and proficiency, from black belts to white belts to people who are not yet familiar with the belt system.
               </Text>
-              <Box sx={styles.banner.partner}>
-                Icons
-
+              <Box sx={styles.banner.socialMedias}>
+                {socialMedias.map(({ icon, url, title }, i) => (
+                  <Tooltip title={title} key={i}>
+                    <IconButton href={url} target="_blank" color="inherit">
+                      {icon}
+                    </IconButton>
+                  </Tooltip>
+                ))}
               </Box>
             </Box>
           </Box>
@@ -119,12 +142,14 @@ const styles = {
         },
       },
     },
-    partner: {
+    socialMedias: {
       display: 'flex',
       flexDirection: ['column', null, null, null, null, 'row'],
       alignItems: ['flex-start', null, null, null, null, 'center'],
       color: 'rgba(2, 7, 62,.6)',
       fontSize: ['15px', null, '16px'],
+      marginTop: "20px",
+      color: "#3fdbb1"
     },
     imageBox: {
       display: 'flex',
