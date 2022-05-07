@@ -1,27 +1,56 @@
-import { Box, Card, Text, Flex, Heading, Button } from 'theme-ui';
+import { Box, Card, Text, Flex, Heading, Button, Grid } from 'theme-ui';
 import { keyframes } from '@emotion/core';
-import React from 'react';
+import React, { useState } from 'react';
 import PricingList from './pricing-list';
+import { IoIosCheckmarkCircle, IoIosCloseCircle } from 'react-icons/io';
+import LeftCard from './left-card';
+import { MobileStepper } from "@material-ui/core"
 
-export default function PriceCard({
-  data: {
-    header,
-    name,
-    description,
-    priceWithUnit,
-    pricePeriod,
-    buttonText = 'Start Free Trial',
-    points,
-  },
-}) {
+const data =
+{
+  name: 'Premium',
+  description: 'For startup enterprise',
+  priceWithUnit: '$178.25',
+  buttonText: 'Subscribe Now',
+  points: [
+    {
+      icon: <IoIosCheckmarkCircle />,
+      text: 'Ultimate access to all course, exercises and assessments',
+      isAvailable: true,
+    },
+    {
+      icon: <IoIosCheckmarkCircle />,
+      text: 'Free acess for all kind of exercise corrections with downloads.',
+      isAvailable: true,
+    },
+    {
+      icon: <IoIosCheckmarkCircle />,
+      text: 'Total assessment corrections with free download access system',
+      isAvailable: true,
+    },
+    {
+      icon: <IoIosCheckmarkCircle />,
+      text: 'Unlimited download of courses on the mobile app contents',
+      isAvailable: true,
+    },
+    {
+      icon: <IoIosCheckmarkCircle />,
+      text: 'Download and print courses and exercises in PDF',
+      isAvailable: true,
+    },
+  ],
+};
+
+const NUM_STEPS = 6
+
+export function RightCard({ isStudent, step: [activeStep, setStep] }) {
   return (
-    <Card className={header ? 'active' : ''} sx={styles.pricingBox}>
-      {header && <Text sx={styles.header}>{header}</Text>}
+    <Card sx={styles.pricingBox}>
       <Box>
         <Flex sx={styles.pricingHeader}>
           <Box>
             <Heading className="package__name" sx={styles.heading}>
-              {name}
+              UofA Student
             </Heading>
             <Text
               as="p"
@@ -32,20 +61,18 @@ export default function PriceCard({
                 },
               }}
             >
-              {description}
+              description
             </Text>
           </Box>
-          {header ? (
-            <Text className="package__price" sx={styles.price}>
-              <span>Starting from</span>
-              <div className="price">
-                {priceWithUnit}
-                <sub>{pricePeriod}</sub>
-              </div>
-            </Text>
-          ) : null}
+          <Text className="package__price" sx={styles.price}>
+            <div className="price">
+              {isStudent ? "$30" : "$100+"}
+              <br />
+              <sub>per semester</sub>
+            </div>
+          </Text>
         </Flex>
-        <PricingList items={points} childStyle={styles.listItem} />
+        <PricingList items={data["points"]} childStyle={styles.listItem} />
         <Box
           sx={{
             textAlign: 'center',
@@ -55,16 +82,40 @@ export default function PriceCard({
             },
           }}
         >
-          <Button variant="buttons.primary" sx={styles.button}>
-            {buttonText}
-          </Button>
+
+          <MobileStepper
+            variant="dots"
+            steps={NUM_STEPS}
+            position="static"
+            activeStep={activeStep}
+            nextButton={
+              <Button variant="buttons.primary" sx={styles.button} disabled={activeStep === NUM_STEPS - 1} onClick={() => setStep(activeStep + 1)}>
+                Next
+              </Button>
+            }
+            backButton={
+              <Button variant="buttons.primary" sx={styles.button} disabled={activeStep === 0} onClick={() => setStep(activeStep - 1)}>
+                Back
+              </Button>
+            }
+          />
         </Box>
       </Box>
     </Card>
   );
 }
 
-const fadeIn = keyframes`
+export default function PriceCards({ isStudent }) {
+  const [step, setStep] = useState(0)
+  return (
+    <Grid sx={styles.wrapper}>
+      <LeftCard isStudent={isStudent} step={[step, setStep]} />
+      <RightCard isStudent={isStudent} step={[step, setStep]} />
+    </Grid>
+  )
+}
+
+export const fadeIn = keyframes`
   from {
     opacity: 0;
   }
@@ -72,7 +123,7 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `;
-const fadeIn2 = keyframes`
+export const fadeIn2 = keyframes`
   from {
     transform: translateY(50%);
     opacity: 0;
@@ -83,7 +134,7 @@ const fadeIn2 = keyframes`
   }
 `;
 
-const styles = {
+export const styles = {
   pricingBox: {
     p: '62px 70px 50px 40px',
     flex: '0 1 38.5%',
@@ -118,48 +169,24 @@ const styles = {
         mt: 0,
       },
     },
-    '&.active': {
-      border: '2.5px solid #25CB9E',
-      '.package__name': {
-        color: 'heading_secondary',
-      },
-      '.package__price > span': {
-        color: 'text',
-      },
-      '.open': {
-        color: 'text',
-      },
-      '.closed': {
-        color: 'text',
-        opacity: 0.6,
-      },
-    },
     'ul li': {
       animation: `${fadeIn2} 0.7s linear`,
     },
-  },
-  header: {
-    height: 32,
-    backgroundColor: '#EF9E48',
-    borderRadius: '5px',
-    fontWeight: 'bold',
-    fontSize: 14,
-    lineHeight: '18px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: '#FFFFFF',
-    position: 'absolute',
-    top: '20px',
-    letterSpacing: '-.14px',
-    px: '10px',
-    animation: `${fadeIn2} 0.7s linear`,
-    '@media screen and (max-width: 768px)': {
-      top: '15px',
-      height: 28,
+    border: '2.5px solid #25CB9E',
+    '.package__name': {
+      color: 'heading_secondary',
+    },
+    '.package__price > span': {
+      color: 'text',
+    },
+    '.open': {
+      color: 'text',
+    },
+    '.closed': {
+      color: 'text',
+      opacity: 0.6,
     },
   },
-
   heading: {
     fontWeight: 'bold',
     fontSize: 22,
@@ -229,7 +256,19 @@ const styles = {
     },
   },
   button: {
-    p: '10px 48.5px',
     animation: `${fadeIn2} 0.7s linear`,
+    ":disabled": {
+      backgroundColor: "#cccccc",
+      color: "grey",
+      cursor: "default"
+    }
   },
+  wrapper: {
+    display: 'grid',
+    gridGap: '30px',
+    gridTemplateColumns: ['1fr', null, null, '1fr 1fr'],
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: ['100%', null, null, null, '990px'],
+  }
 };

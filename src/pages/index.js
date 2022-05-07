@@ -26,10 +26,10 @@ export default function IndexPage() {
             <Banner />
             <FavoriteCourse />
             <CtaThree />
+            <CtaTwo />
             <PopularCourse />
             <WorkFlow />
             <Pricing />
-            <CtaTwo />
             <FAQ />
             <CtaOne />
             <Modal />
