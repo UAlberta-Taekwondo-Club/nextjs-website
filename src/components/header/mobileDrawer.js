@@ -21,7 +21,7 @@ const MobileDrawer = () => {
   }, [dispatch]);
 
   const handleJoinUs = () => {
-    scroller.scrollTo('pricing', scrollOptions)
+    scroller.scrollTo('join-us', scrollOptions)
     toggleHandler()
   }
 

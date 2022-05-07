@@ -30,7 +30,7 @@ const accordionData = [
         Club fees are <strong>$30</strong> per semester for students:
         <ol>
           <li><strong>$20</strong> to be paid via e-transfer to the club email <a href="mailto:crtkd@ualberta.ca">crtkd@ualberta.ca</a>.</li>
-          <li><strong>$10</strong> to Campus Rec via the <a href="http://ualberta.athletesystems.ca">AIMs website</a>.</li>
+          <li><strong>$10</strong> to Campus Rec via the <a href="https://ualberta.athletesystems.ca">AIMs website</a>.</li>
         </ol>
         All members must also have a valid <a href="https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html">VVC membership</a>.
       </div>

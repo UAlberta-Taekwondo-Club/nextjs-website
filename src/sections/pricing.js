@@ -151,7 +151,7 @@ const Pricing = () => {
       <Container>
         <BlockTitle
           sx={styles.pricing.blockTitle}
-          tagline="Pricing Plan"
+          tagline="Club fees"
           heading="Choose your pricing policy"
         />
         <Box sx={styles.pricing.btnWrap}>
@@ -165,7 +165,7 @@ const Pricing = () => {
                 setPlan(false);
               }}
             >
-              Monthly Plan
+              UofA student
             </Box>
             <Box
               as="li"
@@ -176,7 +176,7 @@ const Pricing = () => {
                 setPlan(true);
               }}
             >
-              Annual Plan
+              Not a student
             </Box>
           </Box>
         </Box>
@@ -184,13 +184,13 @@ const Pricing = () => {
         <Grid sx={styles.pricing.wrapper}>
           {plan === true
             ? pricingYearlyData.map((price, index) => (
-                <PriceCard key={index} data={price} />
-              ))
+              <PriceCard key={index} data={price} />
+            ))
             : null}
           {plan === false
             ? pricingMonthlyData.map((price, index) => (
-                <PriceCard key={index} data={price} />
-              ))
+              <PriceCard key={index} data={price} />
+            ))
             : null}
         </Grid>
       </Container>

@@ -8,6 +8,10 @@ export default [
     label: 'Courses',
   },
   {
+    path: 'pricing',
+    label: 'Fees',
+  },
+  {
     path: 'faq',
     label: 'FAQs',
   },

@@ -1,16 +1,18 @@
+import { IconButton, Tooltip } from '@material-ui/core';
 import BannerBG from 'assets/banner-bg-1-1.png';
-import BannerImage from 'assets/banner-image-1.png';
 import BannerPattern from 'assets/banner-pattern.png';
 import BannerTextLine from 'assets/banner-text-line.png';
-import VideoBtn from 'components/video-btn';
 import React from 'react';
-import {
-  Box, Container, Flex, Heading, Image, Text
-} from 'theme-ui';
-import { SiDiscord, SiYoutube, SiLinktree } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
-import { RiInstagramFill } from "react-icons/ri"
-import { IconButton, Tooltip } from '@material-ui/core';
+import { RiInstagramFill } from "react-icons/ri";
+import { SiDiscord, SiLinktree, SiYoutube } from 'react-icons/si';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import {
+  Box, Container, Flex, Heading, Text
+} from 'theme-ui';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const socialMedias = [{
   "title": "Email crtkd@ualberta.ca",
@@ -39,6 +41,7 @@ const socialMedias = [{
 }
 ]
 
+export const getSocialMedia = (name) => socialMedias.filter(({ title }) => title.toLowerCase() == name.toLowerCase())[0]["url"]
 
 
 const Banner = () => {
@@ -69,8 +72,17 @@ const Banner = () => {
           <Box sx={styles.banner.col}>
             <Box sx={styles.banner.imageBox}>
               <Box sx={styles.banner.imageInner}>
-                <Image src={BannerImage} alt="banner image" />
-                <VideoBtn path="L9jU-IIN0ng" />
+                <AutoPlaySwipeableViews
+                  animateHeight
+                  axis="y"
+                >
+                  {images.map((img, i) => (
+                    <img
+                      key={i}
+                      src={img}
+                    />
+                  ))}
+                </AutoPlaySwipeableViews>
               </Box>
             </Box>
           </Box>
@@ -81,6 +93,8 @@ const Banner = () => {
 };
 
 export default Banner;
+
+const images = ["group-1.jpg", "group-2.jpg", "group-3.jpg", "group-4.jpg", "group-5.jpg", "group-6.jpg"]
 
 const styles = {
   banner: {
@@ -144,10 +158,9 @@ const styles = {
     },
     socialMedias: {
       display: 'flex',
-      flexDirection: ['column', null, null, null, null, 'row'],
-      alignItems: ['flex-start', null, null, null, null, 'center'],
-      color: 'rgba(2, 7, 62,.6)',
-      fontSize: ['15px', null, '16px'],
+      flexDirection: "row",
+      alignItems: 'center',
+      fontSize: '16px',
       marginTop: "20px",
       color: "#3fdbb1"
     },
@@ -193,13 +206,6 @@ const styles = {
         position: 'relative',
         zIndex: 9,
         maxWidth: '100%',
-      },
-      '.videoBtn': {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%,-50%)',
-        zIndex: 10,
       },
     },
   },

@@ -39,7 +39,7 @@ export default function Header({ className }) {
             ml={2}
             sx={styles.headerBtn}
             variant="buttons.primary"
-            onClick={() => scroller.scrollTo('pricing', scrollOptions)}
+            onClick={() => scroller.scrollTo('join-us', scrollOptions)}
           >
             Join us
           </Link>

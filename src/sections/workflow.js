@@ -1,43 +1,69 @@
 import { Heading, Box, Text, Container, Grid } from 'theme-ui';
 import BlockTitle from 'components/block-title';
 import React from 'react';
-
+import { Link, scroller } from 'react-scroll';
 import ArrowOdd from 'assets/arrow-odd.png';
 import ArrowEven from 'assets/arrow-even.png';
+import { scrollOptions } from 'components/header/header';
+import { getSocialMedia } from "sections/banner"
 
+const linkStyle = {
+  textDecoration: "underline",
+  cursor: "pointer",
+  color: "#12a1e3",
+}
+function ScrollLink({ children, ...rest }) {
+
+  return <Link style={linkStyle} {...scrollOptions} {...rest}>{children}</Link>
+}
 const workflowData = [
   {
-    title: 'Set disbursement Instructions',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    title: 'Try out your first practice for free',
+    text: (
+      <div>
+        Before you sign any forms or pay any fees, come out to our practices and see if you like it.
+      </div>
+    )
   },
   {
-    title: 'Assembly retrieves funds from your account',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    title: 'Pay the club fees',
+    text: (
+      <div>
+        After your first practice and if you decide to join the club, then <ScrollLink to="pricing">pay the club fees</ScrollLink>, which must be paid each semester.
+      </div>
+    )
   },
   {
-    title: 'Assembly initiates disbursement',
+    title: 'Follow us on social media and email',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      (
+        <div>
+          All important announcements are sent via email.
+          Find our social medias and mailing list sign up <a href={getSocialMedia("Linktree")} target="_blank" style={linkStyle}>here</a>.
+        </div>
+      ),
   },
   {
-    title: 'Customer receives funds payment',
+    title: 'Welcome to the club!',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      (
+        <div>
+          Come out to club practices and events. Before each practice, please sign up in advance <a href={getSocialMedia("Linktree")} target="_blank" style={linkStyle}>here</a>.
+        </div>
+      )
+    ,
   },
 ];
 
 const WorkFlow = () => {
   return (
-    <Box as="section" sx={styles.workflow}>
+    <Box as="section" id="join-us" sx={styles.workflow}>
       <Container>
         <BlockTitle
           sx={styles.workflow.blockTitle}
-          tagline="Whats the function"
-          heading="Let’s see how it works"
+          tagline="Join us"
+          heading="How to join the club?"
         />
-
         <Grid gap="50px 54px" columns={4} sx={styles.workflow.grid}>
           {workflowData.map((item, index) => (
             <Box sx={styles.workflow.card} key={index}>
@@ -62,13 +88,12 @@ const styles = {
   workflow: {
     background: 'linear-gradient(180deg, #EBF9FF 0%, #F6F6FF 100%)',
     position: 'relative',
-    pt: '100px',
-    pb: '100px',
+    py: '50px',
     '@media screen and (max-width: 1366px)': {
-      pb: '100px',
+      pb: '80px',
     },
     '@media screen and (max-width: 992px)': {
-      pb: '60px',
+      pb: '40px',
       paddingTop: '60px',
     },
     blockTitle: {
@@ -180,6 +205,7 @@ const styles = {
           lineHeight: '1.85',
         },
       },
+
     },
-  },
+  }
 };
