@@ -1,11 +1,7 @@
 export default [
   {
-    path: 'banner',
+    path: 'about',
     label: 'About',
-  },
-  {
-    path: 'courses',
-    label: 'Courses',
   },
   {
     path: 'pricing',
