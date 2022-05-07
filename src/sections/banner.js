@@ -11,33 +11,40 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import {
   Box, Container, Flex, Heading, Text
 } from 'theme-ui';
+import { BsCalendarEventFill } from "react-icons/bs"
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
+const ICON_SIZE = 30
 const socialMedias = [{
   "title": "Email crtkd@ualberta.ca",
   "url": "mailto:crtkd@ualberta.ca",
-  "icon": <MdEmail />,
+  "icon": <MdEmail fontSize={ICON_SIZE} />,
 },
 {
   "title": "Instagram @ua_taekwondo",
   "url": "https://www.instagram.com/ua_taekwondo/",
-  "icon": <RiInstagramFill />,
+  "icon": <RiInstagramFill fontSize={ICON_SIZE} />,
 },
 {
   "title": "Youtube",
   "url": "https://www.youtube.com/channel/UCF9sw7YeFE9mbM-POCMie7g",
-  "icon": <SiYoutube />,
+  "icon": <SiYoutube fontSize={ICON_SIZE} />,
+},
+{
+  "title": "Events on Bearsden",
+  "url": "https://alberta.campuslabs.ca/engage/organization/tkdclub/events",
+  "icon": <BsCalendarEventFill fontSize={ICON_SIZE - 5} />
 },
 {
   "title": "Discord",
   "url": "https://discord.gg/z3atcrMWGX",
-  "icon": <SiDiscord />,
+  "icon": <SiDiscord fontSize={ICON_SIZE} />,
 },
 {
   "title": "Linktree",
   "url": "https://linktr.ee/ua_tkd",
-  "icon": <SiLinktree />,
+  "icon": <SiLinktree fontSize={ICON_SIZE} />,
 }
 ]
 
@@ -61,7 +68,7 @@ const Banner = () => {
               <Box sx={styles.banner.socialMedias}>
                 {socialMedias.map(({ icon, url, title }, i) => (
                   <Tooltip title={title} key={i}>
-                    <IconButton href={url} target="_blank" color="inherit">
+                    <IconButton href={url} target="_blank" color="inherit" >
                       {icon}
                     </IconButton>
                   </Tooltip>
@@ -98,7 +105,7 @@ const images = ["group-1.jpg", "group-2.jpg", "group-3.jpg", "group-4.jpg", "gro
 
 const styles = {
   banner: {
-    overflowX: 'hidden',
+    overflow: 'hidden',
     paddingTop: ['100px', '120px'],
     paddingBottom: ['0px', null, '80px'],
     backgroundImage: [
@@ -160,9 +167,8 @@ const styles = {
       display: 'flex',
       flexDirection: "row",
       alignItems: 'center',
-      fontSize: '16px',
       marginTop: "20px",
-      color: "#3fdbb1"
+      color: "#3fdbb1",
     },
     imageBox: {
       display: 'flex',

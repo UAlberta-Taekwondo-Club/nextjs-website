@@ -1,39 +1,24 @@
-import { Box, Grid, Container } from 'theme-ui';
-import React from 'react';
-import BlockTitle from 'components/block-title';
 import FavoriteCard from 'components/favorite-card';
-import fevCardImageOne from 'assets/fev-course-1-1.png';
-import fevCardImageTwo from 'assets/fev-course-1-2.png';
-import fevCardImageThree from 'assets/fev-course-1-3.png';
-
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Box, Container } from 'theme-ui';
 
 const favoriteCourseData = [
   {
-    title: 'How to work with prototype design with adobe xd featuring tools',
-    image: fevCardImageOne,
-    reviewCount: '5.0 (392 reviews)',
-    watchCount: '2,538 students watched',
-    videoLink: 'g9avOpUOREM',
-    starCount: 5,
+    title: 'Education Room GB-23',
+    iframe: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3595.145415543234!2d-113.52645163433893!3d53.523633625372455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x860f638fe3e70d01!2sUniversity%20of%20Alberta%20Faculty%20of%20Education!5e0!3m2!1sen!2sca!4v1651941683045!5m2!1sen!2sca",
+    link: "https://goo.gl/maps/XKASi8o7NsbCnRxE6"
   },
   {
-    title:
-      'Create multiple artboard by using figma prototyping tools development',
-    image: fevCardImageTwo,
-    reviewCount: '4.5 (524 reviews)',
-    watchCount: '3,532 students watched',
-    videoLink: 'L9jU-IIN0ng',
-    starCount: 4,
+    title: 'Instagram',
+    iframe: "https://www.instagram.com/p/CYDPp5ZrMcD/embed",
+    link: "https://www.instagram.com/ua_taekwondo/"
   },
   {
-    title:
-      'Convert your web layout theming easily with sketch zeplin extension',
-    image: fevCardImageThree,
-    reviewCount: '5.0 (392 reviews)',
-    watchCount: '1,037 students watched',
-    videoLink: 'L9jU-IIN0ng',
-    starCount: 5,
+    title: 'Youtube',
+    // https://stackoverflow.com/a/46811491
+    iframe: "https://www.youtube.com/embed/videoseries?list=UUF9sw7YeFE9mbM-POCMie7g", // list is channel ID replaced UC by UU
+    link: "https://www.youtube.com/channel/UCF9sw7YeFE9mbM-POCMie7g"
   },
 ];
 
@@ -68,25 +53,14 @@ const FavoriteCourse = () => {
       },
     },
   };
+
   return (
     <Box as="section" sx={styles.fevCourse}>
       <Container sx={styles.fevCourse.container}>
-        <BlockTitle
-          sx={styles.fevCourse.blockTitle}
-          tagline="Quality features"
-          heading="Tutorials that people love most"
-        />
-        <Swiper {...FavoriteCarousel} sx={styles.carousel}>
-          {favoriteCourseData.map((course, index) => (
+        <Swiper {...FavoriteCarousel}>
+          {favoriteCourseData.map((props, index) => (
             <SwiperSlide key={index}>
-              <FavoriteCard
-                starCount={course.starCount}
-                title={course.title}
-                image={course.image}
-                reviewCount={course.reviewCount}
-                watchCount={course.watchCount}
-                videoLink={course.videoLink}
-              />
+              <FavoriteCard {...props} />
             </SwiperSlide>
           ))}
         </Swiper>

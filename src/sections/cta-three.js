@@ -73,7 +73,7 @@ export default CtaThree;
 
 const styles = {
   ctaThree: {
-    paddingTop: [0, null, null, null, 50, 120],
+    paddingTop: [0, null, null, null, 50, 90],
     paddingBottom: [120, null, null, null, 100, 220],
     row: {
       display: 'flex',
