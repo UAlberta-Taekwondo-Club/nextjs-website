@@ -22,7 +22,7 @@ export default function Header({ className }) {
                 sx={styles.nav.navLink}
                 to={path}
                 key={i}
-                // onClick={() => router.replace(`#${path}`, undefined, { shallow: true })}
+                onClick={() => setTimeout(() => router.replace(`#${path}`, undefined, { shallow: true }), scrollOptions.duration)}
                 {...scrollOptions}
               >
                 {label}
@@ -35,7 +35,10 @@ export default function Header({ className }) {
             ml={2}
             sx={styles.headerBtn}
             variant="buttons.primary"
-            onClick={() => scroller.scrollTo('join-us', scrollOptions)}
+            onClick={() => {
+              scroller.scrollTo('join-us', scrollOptions)
+              setTimeout(() => router.replace(`#join-us`, undefined, { shallow: true }), scrollOptions.duration)
+            }}
           >
             Join us
           </Link>

@@ -9,10 +9,11 @@ import menuItems from './header.data';
 import Logo from 'components/logo';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 import { scrollOptions } from 'components/scroll-link';
+import { useRouter } from 'next/router';
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
-
+  const router = useRouter()
   // Toggle drawer
   const toggleHandler = React.useCallback(() => {
     dispatch({
@@ -21,8 +22,9 @@ const MobileDrawer = () => {
   }, [dispatch]);
 
   const handleJoinUs = () => {
-    scroller.scrollTo('join-us', scrollOptions)
     toggleHandler()
+    scroller.scrollTo('join-us', scrollOptions)
+    setTimeout(() => router.replace(`#join-us`, undefined, { shallow: true }), scrollOptions.duration)
   }
 
   return (
@@ -48,7 +50,10 @@ const MobileDrawer = () => {
                 sx={styles.menu.link}
                 to={path}
                 key={i}
-                onClick={toggleHandler} // close drawer
+                onClick={() => {
+                  toggleHandler() // close drawer
+                  setTimeout(() => router.replace(`#${path}`, undefined, { shallow: true }), scrollOptions.duration)
+                }}
                 {...scrollOptions}
               >
                 {label}
@@ -74,7 +79,6 @@ const styles = {
     justifyContent: 'center',
     flexShrink: '0',
     width: '26px',
-
     '@media screen and (min-width: 992px)': {
       display: 'none',
     },
@@ -85,7 +89,6 @@ const styles = {
     height: '100%',
     background: 'linear-gradient(180deg, #E1F6F9 0%, #FCFCE8 100%)',
   },
-
   close: {
     display: 'flex',
     alignItems: 'center',
@@ -95,7 +98,6 @@ const styles = {
     right: '30px',
     zIndex: '1',
   },
-
   content: {
     width: '100%',
     height: '100%',
@@ -105,13 +107,11 @@ const styles = {
     pb: '40px',
     px: '30px',
   },
-
   menu: {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
     marginTop: '30px',
-
     link: {
       fontSize: '15px',
       fontWeight: '500',
@@ -120,7 +120,6 @@ const styles = {
       cursor: 'pointer',
     },
   },
-
   menuFooter: {
     width: '100%',
     display: 'flex',
@@ -128,7 +127,6 @@ const styles = {
     alignItems: 'center',
     mt: 'auto',
   },
-
   button: {
     fontSize: '15px',
     fw: '700',
@@ -140,8 +138,6 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     py: '0',
-    backgroundColor: '#02073E',
-    color: '#fff',
   },
 };
 
