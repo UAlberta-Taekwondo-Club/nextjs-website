@@ -58,7 +58,7 @@ export const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    p: '62px 70px 50px 40px',
+    p: '40px',
     flex: '0 1 38.5%',
     backgroundColor: '#fff',
     border: '1px solid #F3F4F5',

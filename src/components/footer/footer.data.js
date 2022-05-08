@@ -24,6 +24,10 @@ export default [
     header: 'UAlberta Links',
     items: [
       {
+        path: "https://ualberta.athletesystems.ca",
+        label: "AIMs"
+      },
+      {
         path: 'https://alberta.campuslabs.ca/engage/organization/tkdclub',
         label: 'Bearsden',
       },

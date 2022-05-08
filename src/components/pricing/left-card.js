@@ -8,7 +8,7 @@ import { styles as cardStyles } from "./right-card";
 export default function LeftCard({ isStudent, step: [activeStep, setStep] }) {
     return (
         <Card sx={cardStyles.pricingBox}>
-            <Stepper activeStep={activeStep} orientation="vertical" >
+            <Stepper activeStep={activeStep} orientation="vertical" style={{ padding: 0 }}>
                 {getSteps(isStudent).map((step, i) => (
                     <Step key={i} >
                         <StepLabel >
@@ -30,5 +30,6 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
+        padding: 0,
     }
 }
