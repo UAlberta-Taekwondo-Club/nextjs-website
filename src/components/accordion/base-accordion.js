@@ -3,7 +3,7 @@ import React from 'react';
 class BaseAccordion extends React.Component {
   static defaultProps = {
     stateReducer: (state, changes) => changes,
-    onStateChange: () => {},
+    onStateChange: () => { },
   };
   state = { openIndexes: [0] };
   getState(state = this.state) {
@@ -14,7 +14,7 @@ class BaseAccordion extends React.Component {
           : this.props.openIndexes,
     };
   }
-  internalSetState(changes, callback = () => {}) {
+  internalSetState(changes, callback = () => { }) {
     let allChanges;
     this.setState(
       (state) => {
@@ -40,7 +40,6 @@ class BaseAccordion extends React.Component {
           : [...state.openIndexes, index],
       };
     });
-    console.log('clicked');
   };
   render() {
     return this.props.children({

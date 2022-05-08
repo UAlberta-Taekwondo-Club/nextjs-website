@@ -90,6 +90,9 @@ const styles = {
         letterSpacing: ['-0.5px', null, null, '-1.5px'],
         whiteSpace: ['normal', null, null, null, null, 'pre-line'],
       },
+      '@media(max-width:1024px)': {
+        marginTop: "40px"
+      },
     },
     text: {
       fontSize: [15, null, null, 18],
@@ -104,6 +107,8 @@ const styles = {
     display: "flex",
     overflow: "hidden",
     borderRadius: "10px",
+    width: "100%",
+
   },
   img: {
     display: "flex",
@@ -112,6 +117,8 @@ const styles = {
   },
   slideStyle: {
     display: "flex",
-    justifyContent: "center",
+    '@media(minWidth:1024px)': {
+      justifyContent: "center",
+    },
   }
 };

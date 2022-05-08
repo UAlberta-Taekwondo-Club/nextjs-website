@@ -1,12 +1,10 @@
 import ReactGA from 'react-ga4';
 
 export const initGA = () => {
-  console.log('GA init');
   ReactGA.initialize('G-K5PZKE98K4');
 };
 
 export const logPageView = () => {
-  console.log(`Logging pageview for ${window.location.pathname}`);
   ReactGA.set({ page: window.location.pathname });
   ReactGA.pageview(window.location.pathname);
 };
