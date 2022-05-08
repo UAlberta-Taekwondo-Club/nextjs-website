@@ -45,7 +45,7 @@ export default function SEO() {
     },
     {
       name: "og:image",
-      content: "/og_image.png"
+      content: "/og_image.jpg"
     }
   ];
   return (
