@@ -1,55 +1,31 @@
-import { Box, Flex, Text, Grid, Heading, Container } from 'theme-ui';
 import React from 'react';
-import { Link } from 'components/link';
-import BlockTitle from 'components/block-title';
+import { Box, Container, Flex, Grid, Heading, Text } from 'theme-ui';
 
 const CtaThree = () => {
   return (
     <Box as="section" sx={styles.ctaThree}>
       <Container>
         <Flex sx={styles.ctaThree.row}>
-          <Box sx={styles.ctaThree.colTwo}>
-            <Box className="my-auto">
-              <Box sx={styles.ctaThree.content}>
-                <BlockTitle
-                  sx={styles.ctaThree.blockTitle}
-                  tagline="Core features"
-                  heading={
-                    'Smart Jackpots \n that you may love this \n anytime & anywhere'
-                  }
-                />
-                <Text as="p">
-                  {
-                    'Get your tests delivered at let home collect sample \n from the victory of the managments that supplies \n best design system guidelines ever. Get your tests \n delivered at let home collect sample.'
-                  }
-                </Text>
-                <Link
-                  path="#"
-                  label="Explore details"
-                  variant="buttons.primary"
-                />
-              </Box>
-            </Box>
-          </Box>
+
           <Box sx={styles.ctaThree.colOne}>
             <Grid sx={styles.ctaThree.grid}>
               <Box sx={styles.ctaThree.box}>
                 <Heading as="h3" sx={styles.ctaThree.color1}>
                   80K+
                 </Heading>
-                <Text as="p">{'We have more than \n students'}</Text>
+                <Text as="p">{'Student-led ~ Student delivered ~ Student-focused'}</Text>
               </Box>
               <Box sx={styles.ctaThree.box}>
                 <Heading sx={styles.ctaThree.color2} as="h3">
                   150+
                 </Heading>
                 <Text as="p">
-                  {'Free online tutorials \n videos avaialble'}
+                  {'Beginners welcome'}
                 </Text>
               </Box>
               <Box sx={styles.ctaThree.box}>
                 <Heading sx={styles.ctaThree.color3} as="h3">
-                  90+
+                  image here
                 </Heading>
                 <Text as="p">{'Daily updated blog \n post maintain'}</Text>
               </Box>
@@ -84,22 +60,6 @@ const styles = {
       flex: ['0 0 100%', null, null, null, '0 0 55%'],
       paddingRight: ['0', null, null, null, null, '34px'],
     },
-    colTwo: {
-      flex: ['0 0 100%', null, null, null, '0 0 45%'],
-      display: 'flex',
-      pl: ['0', null, null, null, '40px', '0'],
-      '.my-auto': {
-        marginTop: 'auto',
-        marginBottom: 'auto',
-        width: '100%',
-      },
-      '@media(max-width:991px)': {
-        flex: '0 0 100%',
-        marginTop: '0px',
-        marginBottom: '45px',
-        textAlign: 'center',
-      },
-    },
     grid: {
       display: 'grid',
       gridGap: '45px',
@@ -110,43 +70,6 @@ const styles = {
       '@media(max-width:425px)': {
         gridTemplateColumns: '1fr 1fr',
         gridGap: '20px',
-      },
-    },
-    blockTitle: {
-      h3: {
-        fontSize: ['24px', null, null, '30px', '36px', null, '48px'],
-        lineHeight: ['1.44', null, null, null, null, null, '1.15'],
-        lineHeight: 1.44,
-        maxWidth: ['275px', '450px', null, null, '100%'],
-        marginLeft: ['auto', null, null, null, '0'],
-        marginRight: ['auto', null, null, null, '0'],
-        whiteSpace: ['normal', null, null, null, 'pre-line'],
-      },
-    },
-    content: {
-      '@media(min-width:1025px)': {
-        paddingLeft: '41px',
-      },
-      '> p': {
-        whiteSpace: ['normal', null, null, null, 'pre-line'],
-        fontSize: ['15px', null, null, '16px', null, '18px'],
-        lineHeight: ['2', null, null, null, null, '2.33'],
-        color: '#02073E',
-        marginBottom: '30px',
-        marginTop: '25px',
-        '@media(max-width:425px)': {
-          whiteSpace: 'normal',
-          paddingLeft: '15px',
-          paddingRight: '15px',
-          marginTop: '20px',
-          marginBottom: '20px',
-        },
-      },
-      '@media(max-width:991px)': {
-        width: '100%',
-        maxWidth: '600px',
-        margin: 'auto',
-        marginTop: '20px',
       },
     },
     box: {

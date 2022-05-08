@@ -1,8 +1,17 @@
-import { Box, Text, Flex, Image, Container } from 'theme-ui';
-import React from 'react';
-import { Link } from 'components/link';
 import BlockTitle from 'components/block-title';
-import ctaTwoImage from 'assets/free-course.png';
+import React from 'react';
+import { Box, Container, Flex, Text } from 'theme-ui';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay, virtualize } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
+
+const images = ["etransfer_1.png", "etransfer_2.png"]
+
+function slideRenderer({ index, key }) {
+  const i = Math.abs(index % images.length)
+  return <img key={key} src={images[i]} />
+}
 
 const CtaTwo = () => {
   return (
@@ -10,31 +19,26 @@ const CtaTwo = () => {
       <Container>
         <Flex sx={styles.ctaTwo.row}>
           <Box sx={styles.ctaTwo.col}>
-            <Image
-              src={ctaTwoImage}
-              sx={styles.ctaTwo.img}
-              alt="cta two image"
+            <AutoPlaySwipeableViews
+              animateHeight
+              axis="y"
+              slideRenderer={slideRenderer}
+              direction="decremental"
+              style={styles.swipeableViews}
             />
           </Box>
           <Box sx={styles.ctaTwo.col}>
             <Box sx={styles.ctaTwo.content}>
               <BlockTitle
                 sx={styles.ctaTwo.blockTitle}
-                tagline="Free tutorial"
-                heading={
-                  'More than thousand \n of free tutorial upload \n every weeks'
-                }
+                tagline="태권도"
+                heading="What is taekwondo?"
               />
               <Text as="p" sx={styles.ctaTwo.text}>
-                {
-                  'Get your tests delivered at let home collect sample \n from the victory of the managments that supplies \n best design system  guidelines ever. Get your tests \n delivered at let home collect sample.'
-                }
+                Taekwondo is a Korean martial art with a literal translation of "kicking" (tae), "punching" (kwon), and "the art or way of" (do).
+                It emphasizes head-height kicks, jumping and spinning kicks, and fast kicking techniques.
+                The goal is to give a sense of self-esteem, knowledge of self-defense, heightened mental and physical well being.
               </Text>
-              <Link
-                path="#"
-                label="Explore details"
-                variant="buttons.primary"
-              />
             </Box>
           </Box>
         </Flex>
@@ -61,17 +65,6 @@ const styles = {
       flex: '0 0 50%',
       '@media(max-width:1024px)': {
         flex: '0 0 100%',
-      },
-    },
-    img: {
-      maxWidth: 'none',
-      position: 'relative',
-      right: '220px',
-      bottom: '45px',
-      '@media(max-width:1024px)': {
-        maxWidth: '100%',
-        right: 'auto',
-        bottom: 'auto',
       },
     },
     content: {
@@ -106,4 +99,8 @@ const styles = {
       whiteSpace: ['normal', null, null, null, 'pre-line'],
     },
   },
+  swipeableViews: {
+    borderRadius: "10px",
+    img: { display: "flex" }
+  }
 };

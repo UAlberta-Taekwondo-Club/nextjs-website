@@ -7,13 +7,13 @@ import { MdEmail } from 'react-icons/md';
 import { RiInstagramFill } from "react-icons/ri";
 import { SiDiscord, SiLinktree, SiYoutube } from 'react-icons/si';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+import { autoPlay, virtualize } from 'react-swipeable-views-utils';
 import {
   Box, Container, Flex, Heading, Text
 } from 'theme-ui';
 import { BsCalendarEventFill } from "react-icons/bs"
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
 
 const ICON_SIZE = 30
 const socialMedias = [{
@@ -50,6 +50,11 @@ const socialMedias = [{
 
 export const getSocialMedia = (name) => socialMedias.filter(({ title }) => title.toLowerCase() == name.toLowerCase())[0]["url"]
 
+const images = ["group-1.jpg", "group-2.jpg", "group-3.jpg", "group-4.jpg", "group-5.jpg", "group-6.jpg"]
+function slideRenderer({ index, key }) {
+  const i = Math.abs(index % images.length)
+  return <img key={key} src={images[i]} loading="eager" />
+}
 
 const Banner = () => {
   return (
@@ -82,14 +87,10 @@ const Banner = () => {
                 <AutoPlaySwipeableViews
                   animateHeight
                   axis="y"
-                >
-                  {images.map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                    />
-                  ))}
-                </AutoPlaySwipeableViews>
+                  slideRenderer={slideRenderer}
+                  direction="decremental"
+                  style={styles.swipeableViews}
+                />
               </Box>
             </Box>
           </Box>
@@ -101,7 +102,6 @@ const Banner = () => {
 
 export default Banner;
 
-const images = ["group-1.jpg", "group-2.jpg", "group-3.jpg", "group-4.jpg", "group-5.jpg", "group-6.jpg"]
 
 const styles = {
   banner: {
@@ -209,10 +209,16 @@ const styles = {
         },
       },
       img: {
+        display: "flex",
         position: 'relative',
         zIndex: 9,
         maxWidth: '100%',
       },
     },
   },
+  swipeableViews: {
+    borderRadius: "10px",
+    position: "relative",
+    zIndex: 9
+  }
 };
