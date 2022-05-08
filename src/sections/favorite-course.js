@@ -74,7 +74,7 @@ export default FavoriteCourse;
 const styles = {
   fevCourse: {
     paddingTop: ['60px', null, null, '80px', '110px'],
-    pb: [null, null, null, '30px', '50px', '0'],
+    pb: "30px",
     container: {
       maxWidth: 1440,
       '@media(max-width:1440px)': {

@@ -50,7 +50,7 @@ const socialMedias = [{
 
 export const getSocialMedia = (name) => socialMedias.filter(({ title }) => title.toLowerCase() == name.toLowerCase())[0]["url"]
 
-const images = ["group-1.jpg", "group-2.jpg", "group-3.jpg", "group-4.jpg", "group-5.jpg", "group-6.jpg", "group-7.jpg", "group-8.jpg"]
+const images = ["group_1.jpg", "group_2.jpg", "group_3.jpg", "group_4.jpg", "group_5.jpg", "group_6.jpg", "group_7.jpg", "group_8.jpg"]
 function slideRenderer({ index, key }) {
   const i = Math.abs(index % images.length)
   return <img key={key} src={images[i]} loading="eager" />

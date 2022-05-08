@@ -10,8 +10,8 @@ const Pricing = () => {
       <Container>
         <BlockTitle
           sx={styles.pricing.blockTitle}
-          tagline="Club fees"
-          heading="Cheaper than your bus pass"
+          tagline="$"
+          heading="Club fees"
         />
         <Box sx={styles.pricing.btnWrap}>
           <Box as="ul" sx={styles.pricing.btnUl}>

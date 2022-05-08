@@ -6,11 +6,11 @@ import { autoPlay, virtualize } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
 
-const images = ["etransfer_1.png", "etransfer_2.png"]
+const images = ["gallery_1.jpg", "gallery_2.jpg", "gallery_3.jpg", "gallery_4.jpg", "gallery_5.jpg", "gallery_6.jpg", "gallery_7.jpg", "gallery_8.jpg", "gallery_9.jpg", "gallery_10.jpg", "gallery_11.jpg", "gallery_12.jpg", "gallery_13.jpg", "gallery_14.jpg",]
 
 function slideRenderer({ index, key }) {
   const i = Math.abs(index % images.length)
-  return <img key={key} src={images[i]} />
+  return <img key={key} src={images[i]} style={styles.img} />
 }
 
 const CtaTwo = () => {
@@ -25,6 +25,7 @@ const CtaTwo = () => {
               slideRenderer={slideRenderer}
               direction="decremental"
               style={styles.swipeableViews}
+              slideStyle={styles.slideStyle}
             />
           </Box>
           <Box sx={styles.ctaTwo.col}>
@@ -68,7 +69,7 @@ const styles = {
       },
     },
     content: {
-      paddingLeft: '114px',
+      paddingLeft: '95px',
       '@media(max-width:1024px)': {
         paddingLeft: 0,
         maxWidth: 475,
@@ -100,7 +101,17 @@ const styles = {
     },
   },
   swipeableViews: {
+    display: "flex",
+    overflow: "hidden",
     borderRadius: "10px",
-    img: { display: "flex" }
+  },
+  img: {
+    display: "flex",
+    height: "390px",
+    borderRadius: "10px",
+  },
+  slideStyle: {
+    display: "flex",
+    justifyContent: "center",
   }
 };
