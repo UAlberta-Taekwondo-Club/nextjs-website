@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Heading, Box, Divider, Text, Container } from 'theme-ui';
 import { Link } from 'components/link';
-import Logo from 'components/logo';
+import { Box, Container, Divider, Heading, jsx } from 'theme-ui';
 import menuItems from './footer.data';
+
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
@@ -18,6 +18,7 @@ export default function Footer() {
                 key={i}
                 label={label}
                 variant="footer"
+                target="_blank"
               />
             ))}
           </Box>
@@ -51,7 +52,7 @@ const styles = {
       paddingLeft: '15px',
       paddingRight: '15px',
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr',
+      gridTemplateColumns: '1fr 1fr 1fr',
       '@media(max-width: 991px)': {
         gridTemplateColumns: '1fr 1fr',
       },

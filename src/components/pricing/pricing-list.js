@@ -1,13 +1,14 @@
 import React from 'react';
 import { Flex, Box, IconButton } from 'theme-ui';
 
-export default function PricingList({ items = [], parentStyle, childStyle }) {
+export default function PricingList({ items = [], parentStyle }) {
   return (
     <Box
       as="ul"
-      sx={{
+      style={{
         listStyleType: 'none',
         margin: 0,
+        marginTop: "20px",
         padding: 0,
         ...parentStyle,
       }}
@@ -16,7 +17,7 @@ export default function PricingList({ items = [], parentStyle, childStyle }) {
         <Flex
           className={isAvailable ? 'open' : 'closed'}
           as="li"
-          sx={{ ...childStyle }}
+          sx={styles.listItem}
           key={i}
         >
           <IconButton
@@ -45,4 +46,31 @@ export default function PricingList({ items = [], parentStyle, childStyle }) {
       ))}
     </Box>
   );
+}
+
+
+const styles = {
+  listItem: {
+    fontFamily: 'DM Sans',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: 16,
+    lineHeight: '26px',
+    marginBottom: 22,
+    alignItems: 'flex-start',
+    color: '#343D48',
+    pr: 25,
+    '@media screen and (max-width: 480px)': {
+      fontSize: 15,
+      lineHeight: 1.8,
+      pr: 10,
+      marginBottom: 12,
+    },
+    '&.closed': {
+      opacity: 0.6,
+      button: {
+        color: '#788FB5',
+      },
+    },
+  }
 }

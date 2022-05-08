@@ -1,21 +1,11 @@
-import { Heading, Box, Text, Container, Grid } from 'theme-ui';
-import BlockTitle from 'components/block-title';
-import React from 'react';
-import { Link, scroller } from 'react-scroll';
-import ArrowOdd from 'assets/arrow-odd.png';
 import ArrowEven from 'assets/arrow-even.png';
-import { scrollOptions } from 'components/header/header';
-import { getSocialMedia } from "sections/banner"
+import ArrowOdd from 'assets/arrow-odd.png';
+import BlockTitle from 'components/block-title';
+import ScrollLink, { linkStyle } from 'components/scroll-link';
+import React from 'react';
+import { getSocialMedia } from "sections/banner";
+import { Box, Container, Grid, Heading, Text } from 'theme-ui';
 
-const linkStyle = {
-  textDecoration: "underline",
-  cursor: "pointer",
-  color: "#12a1e3",
-}
-function ScrollLink({ children, ...rest }) {
-
-  return <Link style={linkStyle} {...scrollOptions} {...rest}>{children}</Link>
-}
 const workflowData = [
   {
     title: 'Try out your first practice for free',

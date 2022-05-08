@@ -21,7 +21,7 @@ export default function IndexPage() {
           <SEO />
           <div id="about">
             <Banner />
-            <FavoriteCourse />
+            {/* <FavoriteCourse /> */}
             <CtaThree />
             <CtaTwo />
           </div>

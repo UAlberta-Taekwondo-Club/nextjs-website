@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container } from 'theme-ui';
 import Accordion from 'components/accordion/accordion';
 import BlockTitle from 'components/block-title';
+import ScrollLink from 'components/scroll-link';
 
 const accordionData = [
   {
@@ -19,20 +20,6 @@ const accordionData = [
     contents: (
       <div>
         Yes! We are constantly taking in new members. You can try out your first practice for free before making a commitment.
-      </div>
-    ),
-  },
-  {
-    isExpanded: false,
-    title: `How much are club fees?`,
-    contents: (
-      <div>
-        Club fees are <strong>$30</strong> per semester for students:
-        <ol>
-          <li><strong>$20</strong> to be paid via e-transfer to the club email <a href="mailto:crtkd@ualberta.ca">crtkd@ualberta.ca</a>.</li>
-          <li><strong>$10</strong> to Campus Rec via the <a href="https://ualberta.athletesystems.ca">AIMs website</a>.</li>
-        </ol>
-        All members must also have a valid <a href="https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html">VVC membership</a>.
       </div>
     ),
   },
@@ -123,6 +110,21 @@ const accordionData = [
     contents: (
       <div>
         We are a student-led club and our instructors are volunteer students. All of our instructors are black belts and have years of martial arts experience. Some even teach outside of the club.
+      </div>
+    ),
+  },
+  {
+    isExpanded: false,
+    title: `How much are club fees?`,
+    contents: (
+      <div>
+        Club fees are <strong>$30</strong> per semester for students:
+        <ol>
+          <li><strong>$20</strong> to be paid via e-transfer to the club email <a href="mailto:crtkd@ualberta.ca">crtkd@ualberta.ca</a>.</li>
+          <li><strong>$10</strong> to Campus Rec via the <a href="https://ualberta.athletesystems.ca">AIMs website</a>.</li>
+        </ol>
+        All members must also have a valid <a href="https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html">VVC membership</a>.
+        <br />Go to <ScrollLink to="pricing">fees</ScrollLink> for detailed instructions on how to pay.
       </div>
     ),
   },

@@ -5,16 +5,11 @@ import { Link as ScrollLink, scroller } from 'react-scroll';
 import { Container, Flex, jsx, Link } from 'theme-ui';
 import menuItems from './header.data';
 import MobileDrawer from './mobileDrawer';
+import { scrollOptions } from 'components/scroll-link';
+import { useRouter } from 'next/router';
 
-export const scrollOptions = {
-  spy: true,
-  smooth: true,
-  offset: -100,
-  duration: 500,
-  activeClass: "active"
-}
 export default function Header({ className }) {
-
+  const router = useRouter();
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className}>
@@ -27,6 +22,7 @@ export default function Header({ className }) {
                 sx={styles.nav.navLink}
                 to={path}
                 key={i}
+                // onClick={() => router.replace(`#${path}`, undefined, { shallow: true })}
                 {...scrollOptions}
               >
                 {label}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Container } from 'theme-ui';
 import BlockTitle from 'components/block-title';
-import PriceCards from '../components/price-card';
+import PriceCards from '../components/pricing/price-cards';
 
 const Pricing = () => {
   const [isStudent, setIsStudent] = useState(true);

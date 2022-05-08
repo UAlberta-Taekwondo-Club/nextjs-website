@@ -8,7 +8,7 @@ import { Link } from 'components/link';
 import menuItems from './header.data';
 import Logo from 'components/logo';
 import { Link as ScrollLink, scroller } from 'react-scroll';
-import { scrollOptions } from './header';
+import { scrollOptions } from 'components/scroll-link';
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);

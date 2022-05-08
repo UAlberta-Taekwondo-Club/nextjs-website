@@ -1,97 +1,60 @@
 export default [
   {
-    header: 'About Us',
+    header: 'Social Medias',
     items: [
       {
-        path: '/',
-        label: 'Support Center',
+        path: 'https://www.instagram.com/ua_taekwondo/',
+        label: 'Instagram',
       },
       {
-        path: '/',
-        label: 'Customer Support',
+        path: 'https://linktr.ee/ua_tkd',
+        label: 'Linktree',
       },
       {
-        path: '/',
-        label: 'About Us',
+        path: 'https://www.youtube.com/channel/UCF9sw7YeFE9mbM-POCMie7g',
+        label: 'Youtube',
       },
       {
-        path: '/',
-        label: 'Copyright',
-      },
-      {
-        path: '/',
-        label: 'Popular Campaign',
+        path: 'https://discord.gg/z3atcrMWGX',
+        label: 'Discord',
       },
     ],
   },
   {
-    header: 'Our Information',
+    header: 'UAlberta Links',
     items: [
       {
-        path: '/',
-        label: 'Return Policy',
+        path: 'https://alberta.campuslabs.ca/engage/organization/tkdclub',
+        label: 'Bearsden',
       },
       {
-        path: '/',
-        label: 'Privacy Policy',
+        path: 'https://www.ualberta.ca/campus-community-recreation/our-programs/club-sports/taekwondo.html',
+        label: 'Campus Recreation',
       },
       {
-        path: '/',
-        label: 'Terms & Conditions',
-      },
-      {
-        path: '/',
-        label: 'Site Map',
-      },
-      {
-        path: '/',
-        label: 'Store Hours',
+        path: 'https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html',
+        label: 'VVC Membership',
       },
     ],
   },
   {
-    header: 'My Account',
+    header: 'Quick Links',
     items: [
       {
-        path: '/',
-        label: 'Press inquiries',
+        path: '#about',
+        label: 'About us',
       },
       {
-        path: '/',
-        label: 'Social media ',
+        path: '#join-us',
+        label: 'How to join',
       },
       {
-        path: '/',
-        label: 'directories',
+        path: '#pricing',
+        label: 'How to pay fees',
       },
       {
-        path: '/',
-        label: 'Images & B-roll',
-      },
-      {
-        path: '/',
-        label: 'Permissions',
-      },
-    ],
-  },
-  {
-    header: 'Policy',
-    items: [
-      {
-        path: '/',
-        label: 'Application security',
-      },
-      {
-        path: '/',
-        label: 'Software principles ',
-      },
-      {
-        path: '/',
-        label: 'Unwanted software policy',
-      },
-      {
-        path: '/',
-        label: 'Responsible supply chain',
+        path: '#faq',
+        label: 'FAQs',
       },
     ],
   },
