@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 export default function SEO() {
   const title = 'UAlberta Taekwondo Club'
-  const description = 'University of Alberta Taekwondo Club. A korean martial arts student club.'
+  const description = 'University of Alberta Taekwondo Club. A Korean martial arts student club.'
   const author = 'University of Alberta'
 
   const metaData = [
@@ -21,7 +21,7 @@ export default function SEO() {
     },
     {
       property: `og:type`,
-      content: `website`,
+      content: `sports`,
     },
     {
       name: `twitter:card`,
@@ -39,6 +39,14 @@ export default function SEO() {
       name: `twitter:description`,
       content: description,
     },
+    {
+      name: `og:url`,
+      content: "uatkd.ca",
+    },
+    {
+      name: "og:image",
+      content: "/og_image.png"
+    }
   ];
   return (
     <Head>

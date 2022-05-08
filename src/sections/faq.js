@@ -64,7 +64,7 @@ const accordionData = [
     title: `Where will practices be held?`,
     contents: (
       <div>
-        Practices are held in the Education building room GB-23. You can find the room in the basement at the end of the hallway.
+        Practices are held in the Education building, room GB-23. You can find the room in the basement at the end of the hallway.
       </div>
     ),
   },

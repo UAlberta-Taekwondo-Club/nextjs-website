@@ -1,15 +1,13 @@
 /** @jsx jsx */
 import Logo from 'components/logo';
+import { scrollOptions } from 'components/scroll-link';
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 import { Container, Flex, jsx, Link } from 'theme-ui';
 import menuItems from './header.data';
 import MobileDrawer from './mobileDrawer';
-import { scrollOptions } from 'components/scroll-link';
-import { useRouter } from 'next/router';
 
 export default function Header({ className }) {
-  const router = useRouter();
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className}>
@@ -22,7 +20,6 @@ export default function Header({ className }) {
                 sx={styles.nav.navLink}
                 to={path}
                 key={i}
-                onClick={() => setTimeout(() => router.replace(`#${path}`, undefined, { shallow: true }), scrollOptions.duration)}
                 {...scrollOptions}
               >
                 {label}
@@ -37,7 +34,6 @@ export default function Header({ className }) {
             variant="buttons.primary"
             onClick={() => {
               scroller.scrollTo('join-us', scrollOptions)
-              setTimeout(() => router.replace(`#join-us`, undefined, { shallow: true }), scrollOptions.duration)
             }}
           >
             Join us

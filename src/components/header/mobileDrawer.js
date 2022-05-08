@@ -1,19 +1,16 @@
-import React, { useContext } from 'react';
-import { Button, Box } from 'theme-ui';
-import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
-import { DrawerContext } from 'contexts/drawer/drawer.context';
-import { IoMdClose, IoMdMenu } from 'react-icons/io';
-import { Link } from 'components/link';
-import menuItems from './header.data';
 import Logo from 'components/logo';
-import { Link as ScrollLink, scroller } from 'react-scroll';
 import { scrollOptions } from 'components/scroll-link';
-import { useRouter } from 'next/router';
+import { DrawerContext } from 'contexts/drawer/drawer.context';
+import React, { useContext } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
+import { IoMdClose, IoMdMenu } from 'react-icons/io';
+import { Link as ScrollLink, scroller } from 'react-scroll';
+import { Box, Button } from 'theme-ui';
+import menuItems from './header.data';
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
-  const router = useRouter()
   // Toggle drawer
   const toggleHandler = React.useCallback(() => {
     dispatch({
@@ -24,7 +21,6 @@ const MobileDrawer = () => {
   const handleJoinUs = () => {
     toggleHandler()
     scroller.scrollTo('join-us', scrollOptions)
-    setTimeout(() => router.replace(`#join-us`, undefined, { shallow: true }), scrollOptions.duration)
   }
 
   return (
@@ -52,7 +48,6 @@ const MobileDrawer = () => {
                 key={i}
                 onClick={() => {
                   toggleHandler() // close drawer
-                  setTimeout(() => router.replace(`#${path}`, undefined, { shallow: true }), scrollOptions.duration)
                 }}
                 {...scrollOptions}
               >

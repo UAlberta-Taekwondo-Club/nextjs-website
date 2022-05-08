@@ -86,7 +86,7 @@ export default function getSteps(isStudent) {
                     Our club aims to provide the most accessible way for students to practice martial arts. Our fees are extremely cheap and consists of:
                     <PricingList items={[{
                         icon: <AiFillDollarCircle />,
-                        text: (<div>The <strong>club fee</strong> goes directly to the club to pay for room rentals, events, new equipment, and cleaning supplies.</div>),
+                        text: (<div>The <strong>club fee</strong> goes directly into the club to pay for room rentals, events, new equipment, and cleaning supplies.</div>),
                         isAvailable: true,
                     },
                     {
@@ -133,12 +133,12 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: 4,
-                        text: (<div>Enter <strong>UAlberta Taekwondo Club</strong> for name and <strong>crtkd@ualberta.ca</strong>, then hit Next.</div>),
+                        text: (<div>Enter <strong>UAlberta Taekwondo Club</strong> for name and <strong>crtkd@ualberta.ca</strong> for email, then hit Next.</div>),
                         isAvailable: true,
                     },
                     {
                         icon: 5,
-                        text: (<div>Review the details and then hit Send. Auto-deposit is set up, so no security question is necessary.</div>),
+                        text: (<div>Review the details, and then hit Send. Auto-deposit is set up, so no security question is necessary.</div>),
                         isAvailable: true,
                     },
                     ]} />
@@ -215,11 +215,14 @@ export default function getSteps(isStudent) {
         steps.push({
             left: {
                 title: "Pay for VVC membership",
-                content: (<iframe src="https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html" style={{ border: 0 }} width="100%" height="300px" />)
+                content: ""
             },
             right: {
                 title: "VVC Membership",
                 content: (<div>All members must have a valid Van Vliet Complex (VVC) membership that can be purchased <a href="https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html">here</a>.
+                    <br /> <br />
+                    <iframe src="https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html" style={{ border: 0 }} width="100%" height="300px" />
+
                 </div>)
             }
         })
