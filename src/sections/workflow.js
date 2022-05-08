@@ -11,7 +11,7 @@ const workflowData = [
     title: 'Try out your first practice for free',
     text: (
       <div>
-        Before you sign any forms or pay any fees, come out to our practices and see if you like it.
+        Before you sign any forms or pay any fees, come to our practices and see if you like it.
       </div>
     )
   },
@@ -19,7 +19,7 @@ const workflowData = [
     title: 'Pay the club fees',
     text: (
       <div>
-        After your first practice and if you decide to join the club, then <ScrollLink to="pricing">pay the club fees</ScrollLink>, which must be paid each semester.
+        After your first practice, if you decide to join the club, <ScrollLink to="pricing">pay the club fees</ScrollLink>.
       </div>
     )
   },

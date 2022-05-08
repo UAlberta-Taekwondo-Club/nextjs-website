@@ -9,7 +9,7 @@ const CtaThree = () => {
           <Heading sx={{ color: '#FF753A' }} as="h3">
             Beginners welcome
           </Heading>
-          <Text as="p">Our practices are very beginner friendly, and for many members, it's their first time trying martial arts.</Text>
+          <Text as="p">Our practices are very beginner-friendly, and for many members, it's their first time trying martial arts.</Text>
         </Box>
 
         <Box sx={styles.ctaThree.box}>
@@ -17,8 +17,7 @@ const CtaThree = () => {
             Social events
           </Heading>
           <Text as="p">
-            Our club is a great way to meet new people from across campus at both our practices and at the many social events we host throughout the year.
-          </Text>
+            Our club is a great way to meet new people from across campus at our practices and the many social events we host throughout the year.          </Text>
         </Box>
         <Box sx={styles.ctaThree.box}>
           <Heading sx={{ color: '#E682FF' }} as="h3">

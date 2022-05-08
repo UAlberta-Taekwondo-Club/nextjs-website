@@ -38,7 +38,7 @@ const CtaTwo = () => {
               <Text as="p" sx={styles.ctaTwo.text}>
                 Taekwondo is a Korean martial art with a literal translation of "kicking" (tae), "punching" (kwon), and "the art or way of" (do).
                 It emphasizes head-height kicks, jumping and spinning kicks, and fast kicking techniques.
-                The goal is to give a sense of self-esteem, knowledge of self-defense, heightened mental and physical well being.
+                The goal is to give a sense of self-esteem, knowledge of self-defense, and heightened mental and physical well-being.
               </Text>
             </Box>
           </Box>

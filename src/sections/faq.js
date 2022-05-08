@@ -7,7 +7,7 @@ import ScrollLink from 'components/scroll-link';
 const accordionData = [
   {
     isExpanded: true,
-    title: `I don't have any taekwondo experience, can I still join?`,
+    title: `I don't have any taekwondo experience; can I still join?`,
     contents: (
       <div>
         Yes! We have lots of beginners in the club.
@@ -16,7 +16,7 @@ const accordionData = [
   },
   {
     isExpanded: false,
-    title: `Practices have already started, can I still join?`,
+    title: `Practices have already started; can I still join?`,
     contents: (
       <div>
         Yes! We are constantly taking in new members. You can try out your first practice for free before making a commitment.
@@ -37,7 +37,7 @@ const accordionData = [
     title: `How many practices do I have to attend each week?`,
     contents: (
       <div>
-        The club is very flexible and there is no required number of practices to attend; you can come as much or as little as you want!
+        The club is very flexible, and there is no required number of practices to attend; you can come as much or as little as you want!
       </div>
     ),
   },
@@ -52,7 +52,7 @@ const accordionData = [
   },
   {
     isExpanded: false,
-    title: `How long are practices and do I need to stay the entire time?`,
+    title: `How long are practices, and do I need to stay the entire time?`,
     contents: (
       <div>
         Our practices are generally between 1 and 2 hours long. But don't worry if you can only join for part of the practice! Just make sure to warm up and stretch on your own time.
@@ -70,10 +70,10 @@ const accordionData = [
   },
   {
     isExpanded: false,
-    title: `Do I need to wear dobok (taekwondo training uniform) to practice?`,
+    title: `Do I need to wear a dobok (taekwondo training uniform) to practice?`,
     contents: (
       <div>
-        No, dobok is not required. Many of our members opt for t-shirt and shorts. If you have a dobok, you are more than welcome to wear it to practice!
+        No, a dobok is not required. Many of our members opt for t-shirt and shorts. If you have a dobok, you are more than welcome to wear it to practice!
       </div>
     ),
   },
@@ -82,7 +82,7 @@ const accordionData = [
     title: `Are practices separated into skill levels, so that all participants are improving?`,
     contents: (
       <div>
-        While practice times are not segregated by level, the instructors will adjust drills to better fit the levels of different people. For example when we do kicking drills, advanced people will be given longer and more challenging combos and during fitness portions, they will be given more reps/sets. We also do our best to group people together who have similar experience levels. This way everyone can enjoy the feeling of improving together!
+        While practice times are not segregated by level, the instructors will adjust drills to better fit the levels of different people. For example, when we do kicking drills, advanced people will be given longer and more challenging combos, and during fitness portions, they will be given more reps/sets. We also do our best to group people together who have similar experience levels. This way, everyone can enjoy the feeling of improving together!
       </div>
     ),
   },
@@ -109,7 +109,7 @@ const accordionData = [
     title: `Who instructs the practices?`,
     contents: (
       <div>
-        We are a student-led club and our instructors are volunteer students. All of our instructors are black belts and have years of martial arts experience. Some even teach outside of the club.
+        We are a student-led club, and our instructors are volunteer students. All of our instructors are black belts and have years of martial arts experience. Some even teach outside of the club.
       </div>
     ),
   },

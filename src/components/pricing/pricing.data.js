@@ -30,7 +30,7 @@ export default function getSteps(isStudent) {
 
                     ) : (
                         <div>
-                            You must meet the following requirements to join the club as an non-UAlberta student:
+                            You must meet the following requirements to join the club as a non-UAlberta student:
                             <PricingList items={[{
                                 icon: <IoIosCheckmarkCircle />,
                                 text: 'At least 18 years old',
@@ -83,7 +83,7 @@ export default function getSteps(isStudent) {
             right: {
                 title: "Club fees",
                 content: (<div>
-                    Our club aims to provide the most accessible way for students to practice martial arts. Our fees are extremely cheap and consists of:
+                    Our club aims to provide the most accessible way for students to practice martial arts. Our fees are extremely cheap and consist of:
                     <PricingList items={[{
                         icon: <AiFillDollarCircle />,
                         text: (<div>The <strong>club fee</strong> goes directly into the club to pay for room rentals, events, new equipment, and cleaning supplies.</div>),
@@ -91,7 +91,7 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: <AiFillDollarCircle />,
-                        text: (<div>The <strong>Athlete Information Management System (AIMs) fee</strong> goes to fund the university's Club Sports program.</div>),
+                        text: (<div>The <strong>Athlete Information Management System (AIMs) fee</strong> funds the university's Club Sports program.</div>),
                         isAvailable: true,
                     },
                     {
@@ -115,10 +115,10 @@ export default function getSteps(isStudent) {
             right: {
                 title: "E-transfer $20",
                 content: (<div>
-                    Pay the club fee by e-transfering $20 to the club's email, crtkd@ualberta.ca:
+                    Pay the club fee by e-transferring $20 to the club's email, crtkd@ualberta.ca:
                     <PricingList items={[{
                         icon: 1,
-                        text: (<div>Login to your online banking.</div>),
+                        text: (<div>Log in to your online banking.</div>),
                         isAvailable: true,
                     },
                     {
@@ -128,7 +128,7 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: 3,
-                        text: (<div>Add a new <strong>Interac e-Transfer Recipient</strong> and enter <strong>$20</strong> for amount, then hit Next.</div>),
+                        text: (<div>Add a new <strong>Interac e-Transfer Recipient</strong>, enter <strong>$20</strong> for the amount, then hit Next.</div>),
                         isAvailable: true,
                     },
                     {
@@ -147,7 +147,7 @@ export default function getSteps(isStudent) {
         },
         {
             left: {
-                title: "Pay $10 AIMs fee",
+                title: "Pay the $10 AIMs fee",
                 content: (<div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
                     <img src="aims_1.png" width="100%" loading='lazy' />
                     <img src="aims_2.png" width="100%" loading='lazy' />
@@ -168,7 +168,7 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: 2,
-                        text: (<div>Click on <strong>Create your own account</strong>, if you don't already have one.
+                        text: (<div>If you don't have an account, click on <strong>Create your own account</strong>.
                             {isStudent && " This is NOT your CCID login!"}
                         </div>),
                         isAvailable: true,
@@ -200,7 +200,7 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: 8,
-                        text: (<div>Click on <strong>Checkout</strong>, and then fill in your card details to pay the $10 fee.</div>),
+                        text: (<div>Click on <strong>Checkout</strong> and fill in your card details to pay the $10 fee.</div>),
                         isAvailable: true,
                     },
                     ]} />
