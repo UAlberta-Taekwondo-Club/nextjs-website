@@ -61,8 +61,8 @@ export default InfoWidgets;
 
 const styles = {
   infoWidgets: {
-    pt: 100,
-    pb: 200, // Need to account for the `top: 50px`
+    pt: 70,
+    pb: 150, // Need to account for the `top: 50px`
     px: 25,
     display: "flex",
     grid: {

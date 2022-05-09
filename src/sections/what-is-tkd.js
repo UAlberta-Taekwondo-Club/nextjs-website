@@ -2,16 +2,13 @@ import BlockTitle from 'components/block-title';
 import React from 'react';
 import { Box, Container, Flex, Text } from 'theme-ui';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay, virtualize } from 'react-swipeable-views-utils';
+import { autoPlay } from 'react-swipeable-views-utils';
 
-const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = ["gallery_1.jpg", "gallery_2.jpg", "gallery_3.jpg", "gallery_4.jpg", "gallery_5.jpg", "gallery_6.jpg", "gallery_7.jpg", "gallery_8.jpg", "gallery_9.jpg", "gallery_10.jpg", "gallery_11.jpg", "gallery_12.jpg", "gallery_13.jpg", "gallery_14.jpg",]
 
-function slideRenderer({ index, key }) {
-  const i = Math.abs(index % images.length)
-  return <img key={key} src={images[i]} style={styles.img} loading="eager" />
-}
+
 
 const WhatIsTkd = () => {
   return (
@@ -22,11 +19,15 @@ const WhatIsTkd = () => {
             <AutoPlaySwipeableViews
               animateHeight
               axis="y"
-              slideRenderer={slideRenderer}
               direction="decremental"
               style={styles.swipeableViews}
               slideStyle={styles.slideStyle}
-            />
+            >
+              {images.map((img, i) => (
+                <img key={i} src={img} style={styles.img} loading="eager" />
+              ))}
+
+            </AutoPlaySwipeableViews>
           </Box>
           <Box sx={styles.whatIsTkd.col}>
             <Box sx={styles.whatIsTkd.content}>

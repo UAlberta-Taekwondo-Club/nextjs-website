@@ -4,20 +4,15 @@ import BannerPattern from 'assets/banner-pattern.png';
 import BannerTextLine from 'assets/banner-text-line.png';
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay, virtualize } from 'react-swipeable-views-utils';
+import { autoPlay } from 'react-swipeable-views-utils';
 import {
   Box, Container, Flex, Heading, Text
 } from 'theme-ui';
 import { socialMedias } from './banner.data';
 
-const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = ["group_1.jpg", "group_2.jpg", "group_3.jpg", "group_4.jpg", "group_5.jpg", "group_6.jpg", "group_7.jpg", "group_8.jpg"]
-function slideRenderer({ index, key }) {
-  const i = Math.abs(index % images.length)
-  if (!images[i]) return null
-  return <img key={key} src={images[i]} loading="eager" />
-}
 
 const Banner = () => {
   return (
@@ -50,10 +45,13 @@ const Banner = () => {
                 <AutoPlaySwipeableViews
                   animateHeight
                   axis="y"
-                  slideRenderer={slideRenderer}
                   direction="decremental"
                   style={styles.swipeableViews}
-                />
+                >
+                  {images.map((img, i) => (
+                    <img key={i} src={img} loading="eager" />
+                  ))}
+                </AutoPlaySwipeableViews>
               </Box>
             </Box>
           </Box>
