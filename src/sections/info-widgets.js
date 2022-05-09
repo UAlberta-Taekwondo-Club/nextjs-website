@@ -71,7 +71,7 @@ const styles = {
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       '@media(max-width:1000px)': {
         gridTemplateColumns: '1fr 1fr',
-        gridGap: '20px',
+        gridGap: '15px',
       },
     },
     box: {
@@ -81,6 +81,10 @@ const styles = {
       position: 'relative',
       py: "50px",
       px: "30px",
+      '@media(max-width:1000px)': {
+        py: "40px",
+        px: "18px",
+      },
       '&:nth-of-type(odd)': {
         top: '50px',
       },
