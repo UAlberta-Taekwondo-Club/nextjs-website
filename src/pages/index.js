@@ -1,17 +1,14 @@
-import React from 'react';
-import { ThemeProvider } from 'theme-ui';
-import { StickyProvider } from 'contexts/app/app.provider';
-import theme from 'theme';
-import SEO from 'components/seo';
 import Layout from 'components/layout';
-import Banner from 'sections/banner';
-import CtaOne from 'sections/cta-one';
-import FAQ from 'sections/faq';
-import CtaTwo from 'sections/cta-two';
-import WorkFlow from 'sections/workflow';
-import Pricing from 'sections/pricing';
-import CtaThree from 'sections/cta-three';
-import FavoriteCourse from 'sections/favorite-course';
+import SEO from 'components/seo';
+import { StickyProvider } from 'contexts/app/app.provider';
+import React from 'react';
+import About from 'sections/about';
+import AnyQuestions from 'sections/any-questions';
+import FAQs from 'sections/faqs';
+import Fees from 'sections/fees';
+import JoinUs from 'sections/join-us';
+import theme from 'theme';
+import { ThemeProvider } from 'theme-ui';
 
 export default function IndexPage() {
   return (
@@ -19,17 +16,11 @@ export default function IndexPage() {
       <StickyProvider>
         <Layout>
           <SEO />
-          <div id="about">
-            <Banner />
-            <FavoriteCourse />
-            <CtaThree />
-            <CtaTwo />
-          </div>
-
-          <WorkFlow />
-          <Pricing />
-          <FAQ />
-          <CtaOne />
+          <About />
+          <JoinUs />
+          <Fees />
+          <FAQs />
+          <AnyQuestions />
         </Layout>
       </StickyProvider>
     </ThemeProvider>

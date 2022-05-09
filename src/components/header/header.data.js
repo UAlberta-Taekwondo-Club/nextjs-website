@@ -4,11 +4,11 @@ export default [
     label: 'About',
   },
   {
-    path: 'pricing',
+    path: 'fees',
     label: 'Fees',
   },
   {
-    path: 'faq',
+    path: 'faqs',
     label: 'FAQs',
   },
 ];

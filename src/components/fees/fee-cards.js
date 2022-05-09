@@ -3,7 +3,7 @@ import LeftCard from "./left-card";
 import { RightCard } from "./right-card";
 import { useState } from 'react';
 
-export default function PriceCards({ isStudent }) {
+export default function FeeCards({ isStudent }) {
     const [step, setStep] = useState(0)
     return (
         <Grid sx={styles.wrapper}>

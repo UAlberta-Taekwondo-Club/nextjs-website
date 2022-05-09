@@ -3,52 +3,14 @@ import BannerBG from 'assets/banner-bg-1-1.png';
 import BannerPattern from 'assets/banner-pattern.png';
 import BannerTextLine from 'assets/banner-text-line.png';
 import React from 'react';
-import { MdEmail } from 'react-icons/md';
-import { RiInstagramFill } from "react-icons/ri";
-import { SiDiscord, SiLinktree, SiYoutube } from 'react-icons/si';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay, virtualize } from 'react-swipeable-views-utils';
 import {
   Box, Container, Flex, Heading, Text
 } from 'theme-ui';
-import { BsCalendarEventFill } from "react-icons/bs"
+import { socialMedias } from './banner.data';
 
 const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
-
-const ICON_SIZE = 30
-const socialMedias = [{
-  "title": "Email crtkd@ualberta.ca",
-  "url": "mailto:crtkd@ualberta.ca",
-  "icon": <MdEmail fontSize={ICON_SIZE} />,
-},
-{
-  "title": "Instagram @ua_taekwondo",
-  "url": "https://www.instagram.com/ua_taekwondo/",
-  "icon": <RiInstagramFill fontSize={ICON_SIZE} />,
-},
-{
-  "title": "Youtube",
-  "url": "https://www.youtube.com/channel/UCF9sw7YeFE9mbM-POCMie7g",
-  "icon": <SiYoutube fontSize={ICON_SIZE} />,
-},
-{
-  "title": "Events on Bearsden",
-  "url": "https://alberta.campuslabs.ca/engage/organization/tkdclub/events",
-  "icon": <BsCalendarEventFill fontSize={ICON_SIZE - 5} />
-},
-{
-  "title": "Discord",
-  "url": "https://discord.gg/z3atcrMWGX",
-  "icon": <SiDiscord fontSize={ICON_SIZE} />,
-},
-{
-  "title": "Linktree",
-  "url": "https://linktr.ee/ua_tkd",
-  "icon": <SiLinktree fontSize={ICON_SIZE} />,
-}
-]
-
-export const getSocialMedia = (name) => socialMedias.filter(({ title }) => title.toLowerCase() == name.toLowerCase())[0]["url"]
 
 const images = ["group_1.jpg", "group_2.jpg", "group_3.jpg", "group_4.jpg", "group_5.jpg", "group_6.jpg", "group_7.jpg", "group_8.jpg"]
 function slideRenderer({ index, key }) {

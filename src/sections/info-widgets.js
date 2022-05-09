@@ -1,25 +1,25 @@
 import React from 'react';
 import { Box, Grid, Heading, Text } from 'theme-ui';
 
-const CtaThree = () => {
+const InfoWidgets = () => {
   return (
-    <Box as="section" sx={styles.ctaThree}>
-      <Grid sx={styles.ctaThree.grid}>
-        <Box sx={styles.ctaThree.box}>
+    <Box as="section" sx={styles.infoWidgets}>
+      <Grid sx={styles.infoWidgets.grid}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading sx={{ color: '#FF753A' }} as="h3">
             Beginners welcome
           </Heading>
           <Text as="p">Our practices are very beginner-friendly, and for many members, it's their first time trying martial arts.</Text>
         </Box>
 
-        <Box sx={styles.ctaThree.box}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading sx={{ color: '#FA578E' }} as="h3">
             Social events
           </Heading>
           <Text as="p">
             Our club is a great way to meet new people from across campus at our practices and the many social events we host throughout the year.          </Text>
         </Box>
-        <Box sx={styles.ctaThree.box}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading sx={{ color: '#E682FF' }} as="h3">
             Lowest fees
           </Heading>
@@ -27,27 +27,27 @@ const CtaThree = () => {
             Our fees are priced very low, making martial arts more accessible for everyone. There are no additional fees nor any equipment or uniforms to purchase.
           </Text>
         </Box>
-        <Box sx={styles.ctaThree.box}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading as="h3" sx={{ color: '#EF9E48', p: { lineHeight: 1, m: 0, mt: 3 } }}>
             <p>Student led</p><p> Student delivered</p><p>Student focused</p>
           </Heading>
         </Box>
-        <Box sx={styles.ctaThree.box}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading sx={{ color: '#EF9E48' }} as="h3">
             Kicks
           </Heading>
         </Box>
-        <Box sx={styles.ctaThree.box}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading sx={{ color: '#FA578E' }} as="h3">
             Sparring
           </Heading>
         </Box>
-        <Box sx={styles.ctaThree.box}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading sx={{ color: '#E682FF' }} as="h3">
             Strength
           </Heading>
         </Box>
-        <Box sx={styles.ctaThree.box}>
+        <Box sx={styles.infoWidgets.box}>
           <Heading sx={{ color: '#FF753A' }} as="h3">
             Flexibility
           </Heading>
@@ -57,10 +57,10 @@ const CtaThree = () => {
   );
 };
 
-export default CtaThree;
+export default InfoWidgets;
 
 const styles = {
-  ctaThree: {
+  infoWidgets: {
     pt: 100,
     pb: 200, // Need to account for the `top: 50px`
     px: 25,

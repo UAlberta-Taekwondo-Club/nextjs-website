@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import { Box, Container } from 'theme-ui';
 import BlockTitle from 'components/block-title';
-import PriceCards from '../components/pricing/price-cards';
+import FeeCards from '../components/fees/fee-cards';
 
-const Pricing = () => {
+const Fees = () => {
   const [isStudent, setIsStudent] = useState(true);
   return (
-    <Box as="section" id="pricing" sx={styles.pricing}>
+    <Box as="section" id="fees" sx={styles.fees}>
       <Container>
         <BlockTitle
-          sx={styles.pricing.blockTitle}
+          sx={styles.fees.blockTitle}
           tagline="$"
           heading="Club fees"
         />
-        <Box sx={styles.pricing.btnWrap}>
-          <Box as="ul" sx={styles.pricing.btnUl}>
+        <Box sx={styles.fees.btnWrap}>
+          <Box as="ul" sx={styles.fees.btnUl}>
             <Box
               as="li"
               className={` ${isStudent === true ? 'active' : ''}`}
               variant="buttons.primary"
-              sx={styles.pricing.btn}
+              sx={styles.fees.btn}
               onClick={() => setIsStudent(true)}
             >
               UofA student
@@ -28,24 +28,24 @@ const Pricing = () => {
               as="li"
               className={` ${isStudent === false ? 'active' : ''}`}
               variant="buttons.primary"
-              sx={styles.pricing.btn}
+              sx={styles.fees.btn}
               onClick={() => setIsStudent(false)}
             >
               Not a student
             </Box>
           </Box>
         </Box>
-        <PriceCards isStudent={isStudent} />
+        <FeeCards isStudent={isStudent} />
 
       </Container>
     </Box>
   );
 };
 
-export default Pricing;
+export default Fees;
 
 const styles = {
-  pricing: {
+  fees: {
     paddingTop: 100,
     paddingBottom: 150,
     '@media(max-width:991px)': {
@@ -104,6 +104,5 @@ const styles = {
         padding: '10px 22px',
       },
     },
-
   },
 };

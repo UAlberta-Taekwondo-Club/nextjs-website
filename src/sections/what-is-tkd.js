@@ -13,12 +13,12 @@ function slideRenderer({ index, key }) {
   return <img key={key} src={images[i]} style={styles.img} loading="eager" />
 }
 
-const CtaTwo = () => {
+const WhatIsTkd = () => {
   return (
-    <Box as="section" sx={styles.ctaTwo}>
+    <Box as="section" sx={styles.whatIsTkd}>
       <Container>
-        <Flex sx={styles.ctaTwo.row}>
-          <Box sx={styles.ctaTwo.col}>
+        <Flex sx={styles.whatIsTkd.row}>
+          <Box sx={styles.whatIsTkd.col}>
             <AutoPlaySwipeableViews
               animateHeight
               axis="y"
@@ -28,14 +28,14 @@ const CtaTwo = () => {
               slideStyle={styles.slideStyle}
             />
           </Box>
-          <Box sx={styles.ctaTwo.col}>
-            <Box sx={styles.ctaTwo.content}>
+          <Box sx={styles.whatIsTkd.col}>
+            <Box sx={styles.whatIsTkd.content}>
               <BlockTitle
-                sx={styles.ctaTwo.blockTitle}
+                sx={styles.whatIsTkd.blockTitle}
                 tagline="태권도"
                 heading="What is taekwondo?"
               />
-              <Text as="p" sx={styles.ctaTwo.text}>
+              <Text as="p" sx={styles.whatIsTkd.text}>
                 Taekwondo is a Korean martial art with a literal translation of "kicking" (tae), "punching" (kwon), and "the art or way of" (do).
                 It emphasizes head-height kicks, jumping and spinning kicks, and fast kicking techniques.
                 The goal is to give a sense of self-esteem, knowledge of self-defense, and heightened mental and physical well-being.
@@ -48,10 +48,10 @@ const CtaTwo = () => {
   );
 };
 
-export default CtaTwo;
+export default WhatIsTkd;
 
 const styles = {
-  ctaTwo: {
+  whatIsTkd: {
     paddingBottom: '100px',
     '@media(min-width: 1200px)': {
       paddingTop: '100px',
@@ -108,7 +108,6 @@ const styles = {
     overflow: "hidden",
     borderRadius: "10px",
     width: "100%",
-
   },
   img: {
     display: "flex",

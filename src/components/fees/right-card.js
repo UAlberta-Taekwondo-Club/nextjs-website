@@ -1,7 +1,7 @@
 import { Collapse, MobileStepper } from "@material-ui/core";
-import React, { useRef } from 'react';
+import React from 'react';
 import { Box, Button, Card, Flex, Heading, Text } from 'theme-ui';
-import getSteps from './pricing.data';
+import getSteps from './fees.data';
 
 
 export function RightCard({ isStudent, step: [activeStep, setStep] }) {
@@ -53,7 +53,6 @@ export function RightCard({ isStudent, step: [activeStep, setStep] }) {
 
 
 export const styles = {
-
   pricingBox: {
     display: "flex",
     flexDirection: "column",

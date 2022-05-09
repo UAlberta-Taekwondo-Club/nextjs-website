@@ -13,7 +13,6 @@ export default function Header({ className }) {
       <header sx={styles.header} className={className}>
         <Container sx={styles.container}>
           <Logo />
-
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
               <ScrollLink
@@ -26,8 +25,6 @@ export default function Header({ className }) {
               </ScrollLink>
             ))}
           </Flex>
-
-
           <Link
             ml={2}
             sx={styles.headerBtn}
@@ -38,7 +35,6 @@ export default function Header({ className }) {
           >
             Join us
           </Link>
-
           <MobileDrawer />
         </Container>
       </header>

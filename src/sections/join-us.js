@@ -3,7 +3,7 @@ import ArrowOdd from 'assets/arrow-odd.png';
 import BlockTitle from 'components/block-title';
 import ScrollLink, { linkStyle } from 'components/scroll-link';
 import React from 'react';
-import { getSocialMedia } from "sections/banner";
+import { getSocialMedia } from "components/banner/banner.data";
 import { Box, Container, Grid, Heading, Text } from 'theme-ui';
 
 const workflowData = [
@@ -19,7 +19,7 @@ const workflowData = [
     title: 'Pay the club fees',
     text: (
       <div>
-        After your first practice, if you decide to join the club, <ScrollLink to="pricing">pay the club fees</ScrollLink>.
+        After your first practice, if you decide to join the club, <ScrollLink to="fees">pay the club fees</ScrollLink>.
       </div>
     )
   },
@@ -45,24 +45,24 @@ const workflowData = [
   },
 ];
 
-const WorkFlow = () => {
+const JoinUs = () => {
   return (
-    <Box as="section" id="join-us" sx={styles.workflow}>
+    <Box as="section" id="join-us" sx={styles.joinUs}>
       <Container>
         <BlockTitle
-          sx={styles.workflow.blockTitle}
+          sx={styles.joinUs.blockTitle}
           tagline="Join us"
           heading="How to join the club?"
         />
-        <Grid gap="50px 54px" columns={4} sx={styles.workflow.grid}>
+        <Grid gap="50px 54px" columns={4} sx={styles.joinUs.grid}>
           {workflowData.map((item, index) => (
-            <Box sx={styles.workflow.card} key={index}>
-              <Box sx={styles.workflow.iconBox}>{`0${index + 1}`}</Box>
-              <Box sx={styles.workflow.wrapper}>
-                <Heading sx={styles.workflow.wrapper.title}>
+            <Box sx={styles.joinUs.card} key={index}>
+              <Box sx={styles.joinUs.iconBox}>{`0${index + 1}`}</Box>
+              <Box sx={styles.joinUs.wrapper}>
+                <Heading sx={styles.joinUs.wrapper.title}>
                   {item.title}
                 </Heading>
-                <Text sx={styles.workflow.wrapper.subTitle}>{item.text}</Text>
+                <Text sx={styles.joinUs.wrapper.subTitle}>{item.text}</Text>
               </Box>
             </Box>
           ))}
@@ -72,10 +72,10 @@ const WorkFlow = () => {
   );
 };
 
-export default WorkFlow;
+export default JoinUs;
 
 const styles = {
-  workflow: {
+  joinUs: {
     background: 'linear-gradient(180deg, #EBF9FF 0%, #F6F6FF 100%)',
     position: 'relative',
     py: '50px',

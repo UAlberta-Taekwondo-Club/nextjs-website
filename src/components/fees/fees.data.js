@@ -1,6 +1,6 @@
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableRow } from '@material-ui/core';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
-import PricingList from './pricing-list';
+import List from './list';
 import { AiFillDollarCircle } from "react-icons/ai"
 
 export default function getSteps(isStudent) {
@@ -16,7 +16,7 @@ export default function getSteps(isStudent) {
                     isStudent ? (
                         <div>
                             You must meet the following requirements to be considered an UAlberta student: <br />
-                            <PricingList items={[{
+                            <List items={[{
                                 icon: <IoIosCheckmarkCircle />,
                                 text: 'Currently enrolled as a student at the University of Alberta',
                                 isAvailable: true,
@@ -31,7 +31,7 @@ export default function getSteps(isStudent) {
                     ) : (
                         <div>
                             You must meet the following requirements to join the club as a non-UAlberta student:
-                            <PricingList items={[{
+                            <List items={[{
                                 icon: <IoIosCheckmarkCircle />,
                                 text: 'At least 18 years old',
                                 isAvailable: true,
@@ -73,7 +73,7 @@ export default function getSteps(isStudent) {
                         <TableFooter>
                             <TableRow >
                                 <TableCell colSpan={2}>
-                                    Pricing is per semester and in CAD dollars
+                                    Fees is per semester and in CAD dollars
                                 </TableCell>
                             </TableRow>
                         </TableFooter>
@@ -84,7 +84,7 @@ export default function getSteps(isStudent) {
                 title: "Club fees",
                 content: (<div>
                     Our club aims to provide the most accessible way for students to practice martial arts. Our fees are extremely cheap and consist of:
-                    <PricingList items={[{
+                    <List items={[{
                         icon: <AiFillDollarCircle />,
                         text: (<div>The <strong>club fee</strong> goes directly into the club to pay for room rentals, events, new equipment, and cleaning supplies.</div>),
                         isAvailable: true,
@@ -116,7 +116,7 @@ export default function getSteps(isStudent) {
                 title: "E-transfer $20",
                 content: (<div>
                     Pay the club fee by e-transferring $20 to the club's email, crtkd@ualberta.ca:
-                    <PricingList items={[{
+                    <List items={[{
                         icon: 1,
                         text: (<div>Log in to your online banking.</div>),
                         isAvailable: true,
@@ -161,7 +161,7 @@ export default function getSteps(isStudent) {
                 title: "$10 AIMs",
                 content: (<div>
                     Pay the $10 AIMs fee:
-                    <PricingList items={[{
+                    <List items={[{
                         icon: 1,
                         text: (<div>Go to <a href="https://ualberta.athletesystems.ca" target="_blank">ualberta.athletesystems.ca</a>.</div>),
                         isAvailable: true,

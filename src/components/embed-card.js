@@ -3,7 +3,7 @@ import React from 'react';
 import { BiLinkExternal } from "react-icons/bi";
 import { Box } from 'theme-ui';
 
-const FavoriteCard = (props) => {
+const EmbedCard = (props) => {
   return (
     <Box sx={styles.fevCard}>
       <Box sx={styles.fevCard.image}>
@@ -16,7 +16,7 @@ const FavoriteCard = (props) => {
   );
 };
 
-export default FavoriteCard;
+export default EmbedCard;
 
 const styles = {
   fevCard: {

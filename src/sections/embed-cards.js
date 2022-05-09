@@ -1,9 +1,9 @@
-import FavoriteCard from 'components/favorite-card';
+import EmbedCard from 'components/embed-card';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Box, Container } from 'theme-ui';
 
-const favoriteCourseData = [
+const data = [
   {
     title: 'Education Room GB-23',
     iframe: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3595.145415543234!2d-113.52645163433893!3d53.523633625372455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x860f638fe3e70d01!2sUniversity%20of%20Alberta%20Faculty%20of%20Education!5e0!3m2!1sen!2sca!4v1651941683045!5m2!1sen!2sca",
@@ -22,7 +22,7 @@ const favoriteCourseData = [
   },
 ];
 
-const FavoriteCourse = () => {
+const EmbedCards = () => {
   const FavoriteCarousel = {
     spaceBetween: 30,
     slidesPerView: 3,
@@ -55,12 +55,12 @@ const FavoriteCourse = () => {
   };
 
   return (
-    <Box as="section" sx={styles.fevCourse}>
-      <Container sx={styles.fevCourse.container}>
+    <Box as="section" sx={styles.embedCards}>
+      <Container sx={styles.embedCards.container}>
         <Swiper {...FavoriteCarousel}>
-          {favoriteCourseData.map((props, index) => (
+          {data.map((props, index) => (
             <SwiperSlide key={index}>
-              <FavoriteCard {...props} />
+              <EmbedCard {...props} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -69,10 +69,10 @@ const FavoriteCourse = () => {
   );
 };
 
-export default FavoriteCourse;
+export default EmbedCards;
 
 const styles = {
-  fevCourse: {
+  embedCards: {
     paddingTop: ['60px', null, null, '80px', '110px'],
     pb: "30px",
     container: {

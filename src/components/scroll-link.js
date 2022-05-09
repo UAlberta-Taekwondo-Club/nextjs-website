@@ -1,4 +1,4 @@
-import { Link, scroller } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 
 export const linkStyle = {

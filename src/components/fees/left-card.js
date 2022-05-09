@@ -1,6 +1,6 @@
 import { Step, StepContent, StepLabel, Stepper } from "@material-ui/core";
 import { Card } from 'theme-ui';
-import getSteps from './pricing.data';
+import getSteps from './fees.data';
 import { styles as cardStyles } from "./right-card";
 
 

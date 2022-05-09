@@ -2,16 +2,16 @@ import { Heading, Box, Container } from 'theme-ui';
 import React from 'react';
 import { Link } from 'components/link';
 
-const CtaOne = () => {
+const AnyQuestions = () => {
   return (
-    <Box as="section" sx={styles.ctaBox}>
+    <Box as="section" sx={styles.anyQuestionsBox}>
       <Container>
         <Heading as="h3">{'Have any questions?'}</Heading>
         <Link
           path="mailto:crtkd@ualberta.ca"
           target="_blank"
           label="Email us at crtkd@ualberta.ca"
-          sx={styles.ctaBox.button}
+          sx={styles.anyQuestionsBox.button}
           variant="buttons.primary"
         />
       </Container>
@@ -19,10 +19,10 @@ const CtaOne = () => {
   );
 };
 
-export default CtaOne;
+export default AnyQuestions;
 
 const styles = {
-  ctaBox: {
+  anyQuestionsBox: {
     textAlign: 'center',
     paddingTop: [70, null, null, null, 140],
     paddingBottom: [80, null, null, null, 150],

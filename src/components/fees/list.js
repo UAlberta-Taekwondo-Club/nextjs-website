@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Box, IconButton } from 'theme-ui';
 
-export default function PricingList({ items = [], parentStyle }) {
+export default function List({ items = [], parentStyle }) {
   return (
     <Box
       as="ul"

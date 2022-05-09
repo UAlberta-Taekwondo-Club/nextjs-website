@@ -53,11 +53,11 @@ export default [
         label: 'How to join',
       },
       {
-        path: '#pricing',
+        path: '#fees',
         label: 'How to pay fees',
       },
       {
-        path: '#faq',
+        path: '#faqs',
         label: 'FAQs',
       },
     ],
