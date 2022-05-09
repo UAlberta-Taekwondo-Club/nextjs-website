@@ -6,7 +6,7 @@ import React from 'react';
 import { getSocialMedia } from "components/banner/banner.data";
 import { Box, Container, Grid, Heading, Text } from 'theme-ui';
 
-const workflowData = [
+const data = [
   {
     title: 'Try out your first practice for free',
     text: (
@@ -55,7 +55,7 @@ const JoinUs = () => {
           heading="How to join the club?"
         />
         <Grid gap="50px 54px" columns={4} sx={styles.joinUs.grid}>
-          {workflowData.map((item, index) => (
+          {data.map((item, index) => (
             <Box sx={styles.joinUs.card} key={index}>
               <Box sx={styles.joinUs.iconBox}>{`0${index + 1}`}</Box>
               <Box sx={styles.joinUs.wrapper}>
@@ -138,7 +138,6 @@ const styles = {
         display: 'none',
       },
     },
-
     iconBox: {
       width: '70px',
       height: '70px',
@@ -184,7 +183,6 @@ const styles = {
           mb: '10px',
         },
       },
-
       subTitle: {
         fontSize: '15px',
         fontWeight: 400,
@@ -195,7 +193,6 @@ const styles = {
           lineHeight: '1.85',
         },
       },
-
     },
   }
 };

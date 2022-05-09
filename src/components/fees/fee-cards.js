@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function FeeCards({ isStudent }) {
     const [step, setStep] = useState(0)
     return (
-        <Grid sx={styles.wrapper}>
+        <Grid sx={styles.feeCards}>
             <LeftCard isStudent={isStudent} step={[step, setStep]} />
             <RightCard isStudent={isStudent} step={[step, setStep]} />
         </Grid>
@@ -14,7 +14,7 @@ export default function FeeCards({ isStudent }) {
 }
 
 const styles = {
-    wrapper: {
+    feeCards: {
         display: 'grid',
         gridGap: '30px',
         gridTemplateColumns: ['1fr', null, null, '1fr 1fr'],

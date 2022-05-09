@@ -6,8 +6,6 @@ import EmbedCards from 'sections/embed-cards';
 import { Box } from 'theme-ui';
 
 export default function About() {
-
-
     return (
         <Box as="section" id="about">
             <Banner />

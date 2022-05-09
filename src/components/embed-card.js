@@ -5,8 +5,8 @@ import { Box } from 'theme-ui';
 
 const EmbedCard = (props) => {
   return (
-    <Box sx={styles.fevCard}>
-      <Box sx={styles.fevCard.image}>
+    <Box sx={styles.embedCard}>
+      <Box sx={styles.embedCard.image}>
         <iframe src={props.iframe} style={{ border: 0 }} allowFullScreen loading="lazy" width="100%" height="100%" />
       </Box>
       <Button endIcon={<BiLinkExternal />} href={props.link} target="_blank" color="inherit" variant="text">
@@ -19,7 +19,7 @@ const EmbedCard = (props) => {
 export default EmbedCard;
 
 const styles = {
-  fevCard: {
+  embedCard: {
     color: "#ef9e48",
     backgroundColor: '#fff',
     transition: '500ms',

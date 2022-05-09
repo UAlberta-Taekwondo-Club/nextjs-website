@@ -23,7 +23,7 @@ const data = [
 ];
 
 const EmbedCards = () => {
-  const FavoriteCarousel = {
+  const Carousel = {
     spaceBetween: 30,
     slidesPerView: 3,
     breakpoints: {
@@ -57,7 +57,7 @@ const EmbedCards = () => {
   return (
     <Box as="section" sx={styles.embedCards}>
       <Container sx={styles.embedCards.container}>
-        <Swiper {...FavoriteCarousel}>
+        <Swiper {...Carousel}>
           {data.map((props, index) => (
             <SwiperSlide key={index}>
               <EmbedCard {...props} />

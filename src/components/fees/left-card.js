@@ -7,7 +7,7 @@ import { styles as cardStyles } from "./right-card";
 
 export default function LeftCard({ isStudent, step: [activeStep, setStep] }) {
     return (
-        <Card sx={cardStyles.pricingBox}>
+        <Card sx={cardStyles.feeBox}>
             <Stepper activeStep={activeStep} orientation="vertical" style={{ padding: 0 }}>
                 {getSteps(isStudent).map((step, i) => (
                     <Step key={i} >

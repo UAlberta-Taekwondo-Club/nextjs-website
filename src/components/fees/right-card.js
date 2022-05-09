@@ -8,14 +8,14 @@ export function RightCard({ isStudent, step: [activeStep, setStep] }) {
   const steps = getSteps(isStudent)
 
   return (
-    <Card sx={styles.pricingBox}>
+    <Card sx={styles.feeBox}>
       <Box>
-        <Flex sx={styles.pricingHeader}>
+        <Flex sx={styles.feeHeader}>
           <Heading className="package__name" sx={styles.heading}>
             {steps[activeStep].right.title}
           </Heading>
-          <Text className="package__price" sx={styles.price}>
-            <div className="price">
+          <Text className="package__fee" sx={styles.fee}>
+            <div className="fee">
               {isStudent ? "$30" : "$100+"}
               <sub>/semester</sub>
             </div>
@@ -53,7 +53,7 @@ export function RightCard({ isStudent, step: [activeStep, setStep] }) {
 
 
 export const styles = {
-  pricingBox: {
+  feeBox: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -94,7 +94,7 @@ export const styles = {
     '.package__name': {
       color: 'heading_secondary',
     },
-    '.package__price > span': {
+    '.package__fee > span': {
       color: 'text',
     },
     '.open': {
@@ -111,12 +111,12 @@ export const styles = {
     lineHeight: '23px',
     color: 'black',
   },
-  pricingHeader: {
+  feeHeader: {
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     mb: 25
   },
-  price: {
+  fee: {
     fontWeight: 'bold',
     fontSize: 26,
     lineHeight: 1,
@@ -139,7 +139,7 @@ export const styles = {
       marginBottom: '10px',
       color: 'white',
     },
-    '> .price': {
+    '> .fee': {
       marginBottom: 0,
       color: '#25CB9E',
       '> sub': {

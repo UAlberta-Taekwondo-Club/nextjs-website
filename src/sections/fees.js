@@ -36,7 +36,6 @@ const Fees = () => {
           </Box>
         </Box>
         <FeeCards isStudent={isStudent} />
-
       </Container>
     </Box>
   );
@@ -61,7 +60,7 @@ const styles = {
         transform: 'translate3d(0, 0%, 0)',
       },
     },
-    '.priceFade': {
+    '.feeFade': {
       animationName: 'fadeInUp',
       animationDuration: '1s',
     },
