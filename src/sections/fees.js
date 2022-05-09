@@ -46,11 +46,10 @@ export default Fees;
 
 const styles = {
   fees: {
-    paddingTop: 100,
-    paddingBottom: 150,
+    marginTop: 70,
+    marginBottom: 120,
     '@media(max-width:991px)': {
-      paddingTop: 60,
-      paddingBottom: 60,
+      my: 60
     },
     '@keyframes fadeInUp': {
       from: {
