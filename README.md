@@ -1,6 +1,7 @@
 # UAlberta Taekwondo Club Website
 
 - [uatkd.ca](https://uatkd.ca/)
+- [Google Analytics User Tracking (login with club email)](https://analytics.google.com/analytics/web/#/p313493405/reports/reportinghub)
 
 - The template is from [2. Online Course Template](https://hashnode.com/post/the-best-free-nextjs-landing-page-templates-in-2021-ckmaeebcg0f9vkhs144kj0s27)
 
