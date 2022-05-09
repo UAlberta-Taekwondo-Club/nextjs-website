@@ -12,15 +12,6 @@ import {
   Box, Container, Flex, Heading, Text
 } from 'theme-ui';
 import { BsCalendarEventFill } from "react-icons/bs"
-import Group1 from 'assets/group_1.jpg';
-import Group2 from 'assets/group_2.jpg';
-import Group3 from 'assets/group_3.jpg';
-import Group4 from 'assets/group_4.jpg';
-import Group5 from 'assets/group_5.jpg';
-import Group6 from 'assets/group_6.jpg';
-import Group7 from 'assets/group_7.jpg';
-import Group8 from 'assets/group_8.jpg';
-
 
 const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
 
@@ -59,7 +50,7 @@ const socialMedias = [{
 
 export const getSocialMedia = (name) => socialMedias.filter(({ title }) => title.toLowerCase() == name.toLowerCase())[0]["url"]
 
-const images = [Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8]
+const images = ["group_1.jpg", "group_2.jpg", "group_3.jpg", "group_4.jpg", "group_5.jpg", "group_6.jpg", "group_7.jpg", "group_8.jpg"]
 function slideRenderer({ index, key }) {
   const i = Math.abs(index % images.length)
   if (!images[i]) return null
