@@ -9,7 +9,25 @@ class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en-US">
-        <Head />
+        <Head >
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-K5PZKE98K4`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K5PZKE98K4', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
