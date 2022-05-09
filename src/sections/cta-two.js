@@ -24,7 +24,7 @@ const images = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery6, Gall
 
 function slideRenderer({ index, key }) {
   const i = Math.abs(index % images.length)
-  return <img key={key} src={images[i]} style={styles.img} />
+  return <img key={key} src={images[i]} style={styles.img} loading="eager" />
 }
 
 const CtaTwo = () => {

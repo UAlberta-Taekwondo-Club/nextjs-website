@@ -63,7 +63,7 @@ const images = [Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8]
 function slideRenderer({ index, key }) {
   const i = Math.abs(index % images.length)
   if (!images[i]) return null
-  return <img key={key} src={images[i]} />
+  return <img key={key} src={images[i]} loading="eager" />
 }
 
 const Banner = () => {
