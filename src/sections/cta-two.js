@@ -3,10 +3,24 @@ import React from 'react';
 import { Box, Container, Flex, Text } from 'theme-ui';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay, virtualize } from 'react-swipeable-views-utils';
+import Gallery1 from "assets/gallery_1.jpg"
+import Gallery2 from "assets/gallery_2.jpg"
+import Gallery3 from "assets/gallery_3.jpg"
+import Gallery4 from "assets/gallery_4.jpg"
+import Gallery5 from "assets/gallery_5.jpg"
+import Gallery6 from "assets/gallery_6.jpg"
+import Gallery7 from "assets/gallery_7.jpg"
+import Gallery8 from "assets/gallery_8.jpg"
+import Gallery9 from "assets/gallery_9.jpg"
+import Gallery10 from "assets/gallery_10.jpg"
+import Gallery11 from "assets/gallery_11.jpg"
+import Gallery12 from "assets/gallery_12.jpg"
+import Gallery13 from "assets/gallery_13.jpg"
+import Gallery14 from "assets/gallery_14.jpg"
 
 const AutoPlaySwipeableViews = autoPlay(virtualize(SwipeableViews));
 
-const images = ["gallery_1.jpg", "gallery_2.jpg", "gallery_3.jpg", "gallery_4.jpg", "gallery_5.jpg", "gallery_6.jpg", "gallery_7.jpg", "gallery_8.jpg", "gallery_9.jpg", "gallery_10.jpg", "gallery_11.jpg", "gallery_12.jpg", "gallery_13.jpg", "gallery_14.jpg",]
+const images = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery6, Gallery7, Gallery8, Gallery9, Gallery10, Gallery11, Gallery12, Gallery13, Gallery14]
 
 function slideRenderer({ index, key }) {
   const i = Math.abs(index % images.length)
