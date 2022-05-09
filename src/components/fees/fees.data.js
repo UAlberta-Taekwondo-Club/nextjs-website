@@ -73,7 +73,7 @@ export default function getSteps(isStudent) {
                         <TableFooter>
                             <TableRow >
                                 <TableCell colSpan={2}>
-                                    Fees is per semester and in CAD dollars
+                                    Fees are per semester and in CAD dollars
                                 </TableCell>
                             </TableRow>
                         </TableFooter>
