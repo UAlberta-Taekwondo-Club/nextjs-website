@@ -111,10 +111,11 @@ const styles = {
     overflow: "hidden",
     borderRadius: "10px",
     width: "100%",
+    justifyContent: "center"
   },
   img: {
     display: "flex",
-    height: "390px",
+    height: "500px",
     borderRadius: "10px",
   },
   slideStyle: {

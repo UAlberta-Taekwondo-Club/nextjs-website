@@ -66,10 +66,13 @@ export default InfoWidgets;
 
 const styles = {
   infoWidgets: {
-    pt: 70,
+    pt: 50,
     pb: 150, // Need to account for the `top: 50px`
     px: 50,
     display: "flex",
+    '@media(max-width:1000px)': {
+      pt: 0
+    },
     grid: {
       display: 'grid',
       gridGap: '25px',
