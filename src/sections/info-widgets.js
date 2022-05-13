@@ -89,6 +89,7 @@ const styles = {
       '@media(max-width:1000px)': {
         py: "40px",
         px: "18px",
+        top: '50px',
       },
       '&:nth-of-type(odd)': {
         top: '50px',
