@@ -25,8 +25,13 @@ const Banner = () => {
                 UAlberta <br />
                 Taekwondo Club
               </Heading>
-              <Text as="p">
-                The University of Alberta Taekwondo Club is a community that is eager to include athletes of all skills and fitness levels. We are proud to have a wide range of members with varying degrees of experience and proficiency, from black belts to white belts to people who are not yet familiar with the belt system.
+              <Text as="p" >
+                The University of Alberta Taekwondo Club is one of the biggest clubs on campus.
+                We are proud to have a large community that is welcoming and includes athletes of all skill and fitness levels.
+                Our club has a wide range of members with varying degrees of experience and proficiency, from black belts to white belts to people who are not yet familiar with the belt system.
+                We are a great fit for anyone who wants to improve their level of fitness or be involved in martial arts.
+                Any interested athletes are encouraged to try our club out.
+                We offer one free practice for all participants.
               </Text>
               <Box sx={styles.banner.socialMedias}>
                 {socialMedias.map(({ icon, url, title }, i) => (
@@ -97,7 +102,7 @@ const styles = {
         fontWeight: 'bold',
         position: 'relative',
         width: '100%',
-        fontSize: ['28px', '35px', null, '45px', null, '50px', '85px'],
+        fontSize: ['28px', '35px', null, '45px', null, '50px', '65px'],
         maxWidth: ['500px', null, null, null, null, null, '100%'],
         '&:before': {
           content: '""',

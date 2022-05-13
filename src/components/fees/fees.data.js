@@ -91,7 +91,7 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: <AiFillDollarCircle />,
-                        text: (<div>The <strong>Athlete Information Management System (AIMs) fee</strong> funds the university's Club Sports program.</div>),
+                        text: (<div>The <strong>Athlete Information Management System (AIMs) fee</strong> funds the university's Club Sports program. You only paid this once per semester to join all club sports.</div>),
                         isAvailable: true,
                     },
                     {

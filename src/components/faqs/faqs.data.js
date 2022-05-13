@@ -3,7 +3,7 @@ import ScrollLink from 'components/scroll-link';
 export const faqsData = [
     {
         isExpanded: true,
-        title: `I don't have any taekwondo experience; can I still join?`,
+        title: `Can I join even though I have no Taekwondo experience?`,
         contents: (
             <div>
                 Yes! We have lots of beginners in the club.
@@ -12,7 +12,7 @@ export const faqsData = [
     },
     {
         isExpanded: false,
-        title: `Practices have already started; can I still join?`,
+        title: `Can I join even though the semester has already started?`,
         contents: (
             <div>
                 Yes! We are constantly taking in new members. You can try out your first practice for free before making a commitment.
@@ -30,7 +30,7 @@ export const faqsData = [
     },
     {
         isExpanded: false,
-        title: `How many practices do I have to attend each week?`,
+        title: `How many practices do I need to attend each week?`,
         contents: (
             <div>
                 The club is very flexible, and there is no required number of practices to attend; you can come as much or as little as you want!
@@ -48,7 +48,7 @@ export const faqsData = [
     },
     {
         isExpanded: false,
-        title: `How long are practices, and do I need to stay the entire time?`,
+        title: `How long are practices? Do I need to stay the entire time?`,
         contents: (
             <div>
                 Our practices are generally between 1 and 2 hours long. But don't worry if you can only join for part of the practice! Just make sure to warm up and stretch on your own time.
@@ -106,21 +106,6 @@ export const faqsData = [
         contents: (
             <div>
                 We are a student-led club, and our instructors are volunteer students. All of our instructors are black belts and have years of martial arts experience. Some even teach outside of the club.
-            </div>
-        ),
-    },
-    {
-        isExpanded: false,
-        title: `How much are club fees?`,
-        contents: (
-            <div>
-                Club fees are <strong>$30</strong> per semester for students:
-                <ol>
-                    <li><strong>$20</strong> to be paid via e-transfer to the club email <a href="mailto:crtkd@ualberta.ca">crtkd@ualberta.ca</a>.</li>
-                    <li><strong>$10</strong> to Campus Rec via the <a href="https://ualberta.athletesystems.ca">AIMs website</a>.</li>
-                </ol>
-                All members must also have a valid <a href="https://www.ualberta.ca/campus-community-recreation/facilities/north-campus/access-membership-and-services/membership-categories-and-costs.html">VVC membership</a>.
-                <br />Go to <ScrollLink to="fees">fees</ScrollLink> for detailed instructions on how to pay.
             </div>
         ),
     },

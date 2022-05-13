@@ -24,7 +24,7 @@ const data = [
     )
   },
   {
-    title: 'Follow us on social media and email',
+    title: 'Connect with the club',
     text:
       (
         <div>

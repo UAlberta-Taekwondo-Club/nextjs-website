@@ -38,7 +38,9 @@ const WhatIsTkd = () => {
               />
               <Text as="p" sx={styles.whatIsTkd.text}>
                 Taekwondo is a Korean martial art with a literal translation of "kicking" (tae), "punching" (kwon), and "the art or way of" (do).
-                It emphasizes head-height kicks, jumping and spinning kicks, and fast kicking techniques.
+                It is a striking martial art that utilizes both the hands and feet but generally focuses more on kicking.
+                Speed, mobility, and agility are all valuable skills in Taekwondo.
+                An advanced level of Taekwondo emphasizes head-height kicks, jumping and spinning kicks, and fast kicking techniques.
                 The goal is to give a sense of self-esteem, knowledge of self-defense, and heightened mental and physical well-being.
               </Text>
             </Box>
@@ -70,7 +72,7 @@ const styles = {
       },
     },
     content: {
-      paddingLeft: '95px',
+      paddingLeft: '90px',
       '@media(max-width:1024px)': {
         paddingLeft: 0,
         maxWidth: 475,
@@ -87,7 +89,7 @@ const styles = {
 
       h3: {
         fontSize: ['24px', null, null, '36px', null, '48px'],
-        lineHeight: 1.15,
+        lineHeight: 1,
         letterSpacing: ['-0.5px', null, null, '-1.5px'],
         whiteSpace: ['normal', null, null, null, null, 'pre-line'],
       },
