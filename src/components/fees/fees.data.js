@@ -175,7 +175,7 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: 3,
-                        text: (<div>Sign in to AIMS.</div>),
+                        text: (<div>Sign in to AIMs.</div>),
                         isAvailable: true,
                     },
                     {
@@ -200,7 +200,9 @@ export default function getSteps(isStudent) {
                     },
                     {
                         icon: 8,
-                        text: (<div>Click on <strong>Checkout</strong> and fill in your card details to pay the $10 fee.</div>),
+                        text: (<div>Click on <strong>Checkout</strong> and fill in your card details to pay the $10 fee.
+                            If you have already paid the AIMs fee this semester, you do not need to pay again.
+                        </div>),
                         isAvailable: true,
                     },
                     ]} />
