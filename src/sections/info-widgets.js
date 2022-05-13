@@ -75,7 +75,7 @@ const styles = {
       gridGap: '25px',
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       '@media(max-width:1000px)': {
-        gridTemplateColumns: '1fr 1fr',
+        gridTemplateColumns: '1fr',
         gridGap: '15px',
       },
     },
