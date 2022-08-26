@@ -27,7 +27,7 @@ export const socialMedias = [{
 },
 {
     "title": "Discord",
-    "url": "https://discord.gg/z3atcrMWGX",
+    "url": "https://discord.gg/ScXmdjGzbS",
     "icon": <SiDiscord fontSize={ICON_SIZE} />,
 },
 {
