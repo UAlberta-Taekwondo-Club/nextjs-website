@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { Link } from 'components/link';
-import { Box, Container, Divider, Heading, jsx } from 'theme-ui';
-import menuItems from './footer.data';
+import { Link } from "components/link";
+import { Box, Container, Divider, Heading, jsx } from "theme-ui";
+import menuItems from "./footer.data";
 
 export default function Footer() {
   return (
@@ -18,7 +18,6 @@ export default function Footer() {
                 key={i}
                 label={label}
                 variant="footer"
-                target="_blank"
               />
             ))}
           </Box>
@@ -30,55 +29,55 @@ export default function Footer() {
 
 const styles = {
   footer: {
-    paddingBottom: '60px',
-    '@media(max-width: 1024px)': {
-      paddingBottom: '70px',
+    paddingBottom: "60px",
+    "@media(max-width: 1024px)": {
+      paddingBottom: "70px",
     },
-    '@media(max-width: 991px)': {
-      paddingBottom: '30px',
+    "@media(max-width: 991px)": {
+      paddingBottom: "30px",
     },
     divider: {
-      borderColor: '#E5ECF4',
+      borderColor: "#E5ECF4",
       margin: 0,
-      borderWidth: '1px',
-      width: '100%',
-      maxWidth: '900px',
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      marginBottom: '55px',
+      borderWidth: "1px",
+      width: "100%",
+      maxWidth: "900px",
+      marginLeft: "auto",
+      marginRight: "auto",
+      marginBottom: "55px",
     },
     container: {
-      maxWidth: '930px',
-      paddingLeft: '15px',
-      paddingRight: '15px',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr',
-      '@media(max-width: 991px)': {
-        gridTemplateColumns: '1fr 1fr',
+      maxWidth: "930px",
+      paddingLeft: "15px",
+      paddingRight: "15px",
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr 1fr",
+      "@media(max-width: 991px)": {
+        gridTemplateColumns: "1fr 1fr",
       },
     },
     widget: {
-      '@media(max-width: 991px)': {
-        marginBottom: '30px',
+      "@media(max-width: 991px)": {
+        marginBottom: "30px",
       },
-      'a:hover': {
-        color: 'primary',
-        cursor: 'pointer',
+      "a:hover": {
+        color: "primary",
+        cursor: "pointer",
       },
-      'a+a': {
-        marginTop: '6px',
+      "a+a": {
+        marginTop: "6px",
       },
     },
     title: {
-      fontSize: '18px',
+      fontSize: "18px",
       fontWeight: 500,
       lineHeight: 1.67,
       margin: 0,
-      marginBottom: '14px',
+      marginBottom: "14px",
     },
     text: {
-      fontSize: '14px',
-      cursor: 'pointer',
+      fontSize: "14px",
+      cursor: "pointer",
     },
   },
 };
