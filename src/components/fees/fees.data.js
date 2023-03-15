@@ -239,7 +239,7 @@ export default function getSteps(isStudent) {
           <div
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
           >
-            <img src="aims_1.png" width="100%" loading="lazy" />
+            <img src="aims_1.jpg" width="100%" loading="lazy" />
             <img src="aims_2.png" width="100%" loading="lazy" />
             <img src="aims_3.png" width="100%" loading="lazy" />
             <img src="aims_4.png" width="100%" loading="lazy" />

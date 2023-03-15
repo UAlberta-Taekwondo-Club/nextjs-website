@@ -36,7 +36,7 @@ const Banner = () => {
               </a>
 
               <Text as="p">
-                The University of Alberta Taekwondo Club is one of the biggest
+                The University of Calgary Taekwondo Club is one of the smallest
                 clubs on campus. We are proud to have a large community that is
                 welcoming and includes athletes of all skill and fitness levels.
                 Our club has a wide range of members with varying degrees of
