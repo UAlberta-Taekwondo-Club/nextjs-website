@@ -72,7 +72,7 @@ export default function getSteps(isStudent) {
                 <TableCell align="right">$20</TableCell>
               </TableRow>
               <TableRow hover>
-                <TableCell>AIMs fee</TableCell>
+                <TableCell>ActivityReg fee</TableCell>
                 <TableCell align="right">$10</TableCell>
               </TableRow>
               <TableRow hover>
@@ -123,7 +123,7 @@ export default function getSteps(isStudent) {
                     <div>
                       The{" "}
                       <strong>
-                        Athlete Information Management System (AIMs) fee
+                        Activity Registration (ActivityReg) fee
                       </strong>{" "}
                       funds the university's Club Sports program. You only pay
                       this once per semester to join all club sports.
@@ -234,25 +234,25 @@ export default function getSteps(isStudent) {
     },
     {
       left: {
-        title: "Pay the $10 AIMs fee",
+        title: "Pay the $10 ActivityReg fee",
         content: (
           <div
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
           >
-            <img src="aims_1.png" width="100%" loading="lazy" />
+            {/* <img src="aims_1.png" width="100%" loading="lazy" />
             <img src="aims_2.png" width="100%" loading="lazy" />
             <img src="aims_3.png" width="100%" loading="lazy" />
             <img src="aims_4.png" width="100%" loading="lazy" />
             <img src="aims_5.png" width="100%" loading="lazy" />
-            <img src="aims_6.png" width="100%" loading="lazy" />
+            <img src="aims_6.png" width="100%" loading="lazy" /> */}
           </div>
         ),
       },
       right: {
-        title: "$10 AIMs",
+        title: "$10 ActivityReg",
         content: (
           <div>
-            Pay the $10 AIMs fee:
+            Pay the $10 ActivityReg fee:
             <List
               items={[
                 {
@@ -284,7 +284,7 @@ export default function getSteps(isStudent) {
                 },
                 {
                   icon: 3,
-                  text: <div>Sign in to AIMs.</div>,
+                  text: <div>Sign in to ActivityReg.</div>,
                   isAvailable: true,
                 },
                 {
@@ -329,7 +329,7 @@ export default function getSteps(isStudent) {
                     <div>
                       Click on <strong>Checkout</strong> and fill in your card
                       details to pay the $10 fee. If you have already paid the
-                      AIMs fee this semester, you do not need to pay again.
+                      ActivityReg fee this semester, you do not need to pay again.
                     </div>
                   ),
                   isAvailable: true,
