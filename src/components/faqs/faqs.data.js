@@ -75,10 +75,10 @@ export const faqsData = [
     },
     {
         isExpanded: false,
-        title: `Are practices separated into skill levels, so that all participants are improving?`,
+        title: `What are the requirements for joining the Taekwondo Club?`,
         contents: (
             <div>
-                While practice times are not segregated by level, the instructors will adjust drills to better fit the levels of different people. For example, when we do kicking drills, advanced people will be given longer and more challenging combos, and during fitness portions, they will be given more reps/sets. We also do our best to group people together who have similar experience levels. This way, everyone can enjoy the feeling of improving together!
+                You have to be either a) a student at the University of Alberta OR b) 18 years old to join. 
             </div>
         ),
     },
