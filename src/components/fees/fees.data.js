@@ -266,10 +266,10 @@ export default function getSteps(isStudent) {
                     <div>
                       Go to{" "}
                       <a
-                        href="https://ualberta.athletesystems.ca"
+                        href="https://www.activityreg.ualberta.ca/UOFA/public"
                         target="_blank"
                       >
-                        ualberta.athletesystems.ca
+                        activityreg.ualberta.ca
                       </a>
                       .
                     </div>
@@ -280,7 +280,7 @@ export default function getSteps(isStudent) {
                   icon: 2,
                   text: (
                     <div>
-                      If you don't have an account, click on{" "}
+                      Log in to Acitvity Registration or {" "}
                       <strong>Create your own account</strong>.
                       {isStudent && " This is NOT your CCID login!"}
                     </div>
@@ -289,14 +289,14 @@ export default function getSteps(isStudent) {
                 },
                 {
                   icon: 3,
-                  text: <div>Sign in to ActivityReg.</div>,
+                  text: <div>Click <strong>"Browse Our Programs"</strong>.</div>,
                   isAvailable: true,
                 },
                 {
                   icon: 4,
                   text: (
                     <div>
-                      Click on <strong>Register for a team or club</strong>.
+                      Click on <strong>Club Sports</strong>.
                     </div>
                   ),
                   isAvailable: true,
@@ -305,25 +305,22 @@ export default function getSteps(isStudent) {
                   icon: 5,
                   text: (
                     <div>
-                      Select <strong>Taekwondo Club</strong> from the dropdown
-                      menu and then click on <strong>Begin registration</strong>
-                      .
+                      Select the semester you wish to register for.
                     </div>
                   ),
                   isAvailable: true,
                 },
                 {
                   icon: 6,
-                  text: <div>Fill in your personal information.</div>,
+                  text: <div>Scroll down to Taekwondo and click <strong>Search</strong>.</div>,
                   isAvailable: true,
                 },
                 {
                   icon: 7,
                   text: (
                     <div>
-                      Thoroughly read through the legal documents, and select{" "}
-                      <strong>Yes - I agree</strong> from the dropdown once
-                      read.
+                      Click {" "}
+                      <strong>Register</strong>
                     </div>
                   ),
                   isAvailable: true,
@@ -332,9 +329,7 @@ export default function getSteps(isStudent) {
                   icon: 8,
                   text: (
                     <div>
-                      Click on <strong>Checkout</strong> and fill in your card
-                      details to pay the $10 fee. If you have already paid the
-                      ActivityReg fee this semester, you do not need to pay again.
+                      Fill out your information, submit, and pay the fee.
                     </div>
                   ),
                   isAvailable: true,
