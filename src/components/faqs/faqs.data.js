@@ -21,10 +21,10 @@ export const faqsData = [
     },
     {
         isExpanded: false,
-        title: `Is there belt testing?`,
+        title: `What is the minimum age requirement to join the club?`,
         contents: (
             <div>
-                Unfortunately, the club does not provide belt testing.
+                If you are a current University of Alberta student, you can be 17. If you are not a current student, you must be at least 18 to participate.
             </div>
         ),
     },
