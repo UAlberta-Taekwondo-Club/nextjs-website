@@ -163,7 +163,7 @@ export default function getSteps(isStudent) {
     },
     {
       left: {
-        title: "E-transfer $20 to crtkd@ualberta.ca",
+        title: isStudent ? ("E-transfer $20 to crtkd@ualberta.ca") : ("E-transfer $25 to crtkd@ualberta.ca"),
         content: (
           <div
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
