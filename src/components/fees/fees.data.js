@@ -69,7 +69,7 @@ export default function getSteps(isStudent) {
             <TableBody>
               <TableRow hover>
                 <TableCell>Club fee</TableCell>
-                <TableCell align="right">$20</TableCell>
+                <TableCell align="right">${isStudent ? "$20" : "$25"}</TableCell>
               </TableRow>
               <TableRow hover>
                 <TableCell>ActivityReg fee</TableCell>
