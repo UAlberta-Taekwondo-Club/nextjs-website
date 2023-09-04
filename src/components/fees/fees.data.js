@@ -163,7 +163,8 @@ export default function getSteps(isStudent) {
     },
     {
       left: {
-        title: isStudent ? ("E-transfer $20 to crtkd@ualberta.ca") : ("E-transfer $25 to crtkd@ualberta.ca"),
+        title: isStudent ? ("E-transfer $20 to crtkd@ualberta.ca") : 
+        ("E-transfer $25 to crtkd@ualberta.ca"),
         content: (
           <div
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
@@ -174,11 +175,11 @@ export default function getSteps(isStudent) {
         ),
       },
       right: {
-        title: "E-transfer $20",
+        title: isStudent ? ("E-transfer $20") : ("E-transfer $25"),
         content: (
           <div>
-            Pay the club fee by e-transferring $20 to the club's email,
-            crtkd@ualberta.ca:
+            ${isStudent ? ("Pay the club fee by e-transferring $20 to the club's email, crtkd@ualberta.ca:") : 
+            ("Pay the club fee by e-transferring $25 to the club's email, crtkd@ualberta.ca:")}
             <List
               items={[
                 {
@@ -197,12 +198,16 @@ export default function getSteps(isStudent) {
                 },
                 {
                   icon: 3,
-                  text: (
+                  text: isStudent ? (
                     <div>
                       Add a new <strong>Interac e-Transfer Recipient</strong>,
                       enter <strong>$20</strong> for the amount, then hit Next.
                     </div>
-                  ),
+                  ) : 
+                  ( <div>
+                    Add a new <strong>Interac e-Transfer Recipient</strong>,
+                    enter <strong>$25</strong> for the amount, then hit Next.
+                    </div> ),
                   isAvailable: true,
                 },
                 {
