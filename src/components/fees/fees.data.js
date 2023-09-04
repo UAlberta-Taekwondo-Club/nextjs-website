@@ -69,7 +69,7 @@ export default function getSteps(isStudent) {
             <TableBody>
               <TableRow hover>
                 <TableCell>Club fee</TableCell>
-                <TableCell align="right">${isStudent ? "$20" : "$25"}</TableCell>
+                <TableCell align="right">{isStudent ? "$20" : "$25"}</TableCell>
               </TableRow>
               <TableRow hover>
                 <TableCell>ActivityReg fee</TableCell>
@@ -178,7 +178,7 @@ export default function getSteps(isStudent) {
         title: isStudent ? ("E-transfer $20") : ("E-transfer $25"),
         content: (
           <div>
-            ${isStudent ? ("Pay the club fee by e-transferring $20 to the club's email, crtkd@ualberta.ca:") : 
+            {isStudent ? ("Pay the club fee by e-transferring $20 to the club's email, crtkd@ualberta.ca:") : 
             ("Pay the club fee by e-transferring $25 to the club's email, crtkd@ualberta.ca:")}
             <List
               items={[
