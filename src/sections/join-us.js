@@ -8,10 +8,19 @@ import { Box, Container, Grid, Heading, Text } from "theme-ui";
 
 const data = [
   {
+    title: "Try out your first practice for free",
+    text: (
+      <div>
+        Before you sign any forms or pay any fees, come to our practices and see
+        if you like it.
+      </div>
+    ),
+  },
+  {
     title: "Pay the club fees",
     text: (
       <div>
-        If you decide to join the club,{" "}
+        After your first practice, if you decide to join the club,{" "}
         <ScrollLink to="fees">pay the club fees</ScrollLink>.
       </div>
     ),
