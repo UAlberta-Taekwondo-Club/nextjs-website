@@ -15,7 +15,7 @@ export const faqsData = [
         title: `Can I join even though the semester has already started?`,
         contents: (
             <div>
-                Yes! We are constantly taking in new members. You can try out your first practice for free before making a commitment. Register for drop in <a href = "https://www.activityreg.ualberta.ca/UOFA/public/category/browse/CSSPEV">here</a>. 
+                Yes! We are constantly taking in new members.
             </div>
         ),
     },
