@@ -44,8 +44,7 @@ const Banner = () => {
                 people who are not yet familiar with the belt system. We are a
                 great fit for anyone who wants to improve their level of fitness
                 or be involved in martial arts. Any interested athletes are
-                encouraged to try our club out. We offer one free practice for
-                all participants.
+                encouraged to try our club out.
               </Text>
               <Box sx={styles.banner.socialMedias}>
                 {socialMedias.map(({ icon, url, title }, i) => (
